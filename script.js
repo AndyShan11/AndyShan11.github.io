@@ -16,9 +16,9 @@
       navResearch: 'Research', navProjects: 'Projects', navProfile: 'Profile',
       heroEyebrow: 'Mathematics × Trustworthy AI',
       heroTitle: 'I build AI systems that <span class="gradient-text">test before they trust.</span>',
-      heroLede: 'I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research connects trustworthy machine learning, AI agents, causal decision-making, neural algorithmic reasoning, and knowledge graphs. I am grateful to my undergraduate mentors, <a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">Prof. Da Zhou</a> and <a class="mentor-link" href="https://scholar.xmu.edu.cn/Authors/Index?Year=2024&amp;id=LuoYe" target="_blank" rel="noopener">Prof. Ye Luo</a>, for their guidance.',
+      heroLede: 'I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research connects trustworthy machine learning, AI agents, causal decision-making, neural algorithmic reasoning, and knowledge graphs. I am grateful to my undergraduate mentors, <a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">Prof. Da Zhou</a> and <a class="mentor-link" href="https://scholar.xmu.edu.cn/Authors/Index?id=LuoYe" target="_blank" rel="noopener">Prof. Ye Luo</a>, for their guidance.',
       exploreResearch: 'Explore research', getInTouch: 'Get in touch',
-      localTime: 'Xiamen time', lastUpdated: 'Updated', pageViews: 'Views', visitorIp: 'Visitor IP',
+      localTime: 'Beijing time', lastUpdated: 'Updated', pageViews: 'Views', visitorIp: 'IP', locationHongKong: 'Hong Kong, China',
       selectedManuscripts: 'Selected manuscripts', researchTitle: 'Research that questions its assumptions.',
       researchIntro: 'Across causal learning, agents, and graphs, I design controls that reveal when external knowledge helps—and when a model should refuse it.',
       filterAll: 'All', filterCausal: 'Causal AI', filterAgents: 'Agents', filterGraphs: 'Graphs & reasoning',
@@ -54,16 +54,17 @@
       rcdaDescriptors: 'Audit descriptors<br><small>e/r · symmetry · provenance</small>', rcdaChecklist: 'Controlled reporting checklist',
       rcdaNote: 'Architectural conclusions are conditioned on decoder, depth, data, and recipe.',
       rcdaDesc: 'Shows how decoder choice and training recipe can confound structural KGC comparisons, motivating controlled reporting across architectures and datasets.',
-      selectedProjects: 'Selected projects', projectsTitle: 'Open, inspectable research systems.',
-      locsourceType: '01 / Spatial AI', locsourceDesc: 'Conservative, auditable transcript-ownership proposals for Xenium post-segmentation analysis.',
+      selectedProjects: 'Other projects', projectsTitle: 'Open, inspectable research systems.',
+      locsourceType: '03 / Spatial AI', locsourceDesc: 'Conservative, auditable transcript-ownership proposals for Xenium post-segmentation analysis.',
       booleanType: '02 / Discrete structure', booleanDesc: 'Walsh-spectral affine approximation, derivative-guided affine covers, and feedforward sequence recovery.',
-      memoryType: '03 / Research agents', memoryDesc: 'Bounded, claim-relevant memory views and fail-closed evidence auditing for research agents.',
+      memoryType: '01 / Research agents', memoryDesc: 'Bounded, claim-relevant memory views and fail-closed evidence auditing for research agents.',
       repoReport: 'Repository & report ↗', openRepository: 'Open repository ↗', educationRecognition: 'Education & recognition',
       xmu: 'Xiamen University', educationDegree: 'B.S. in Mathematics and Applied Mathematics<br>School of Mathematical Sciences',
       honorOne: '<b>Fujian First Prize</b><br>National Undergraduate Mathematical Modeling Contest · Team Leader',
       honorTwo: '<b>Fujian Third Prize</b><br>National Undergraduate Mathematical Modeling Contest · Team Leader',
       honorThree: '<b>Outstanding Student</b><br>Cryptography & Mathematics Summer School · Top 10 of 60',
-      contact: 'Contact', contactTitle: 'Let’s discuss reliable reasoning<br>under imperfect information.', emailMe: 'Email me',
+      hobbies: 'Beyond research', hobbiesTitle: 'Things I enjoy away from the screen.', basketball: 'Basketball', basketballNote: 'Long-time NBA fan', billiards: 'Billiards', piano: 'Piano', bridge: 'Bridge',
+      contact: 'Contact', contactTitle: 'Open to conversation<br>and collaboration.', emailMe: 'Email me',
       footerLine: 'Built for clarity, motion, and evidence.', backTop: 'Back to top ↑',
       orbitCausal: 'Causal AI', orbitAgents: 'Agents', orbitGraphs: 'Graphs',
       signalPrior: 'Prior', signalCalibrate: 'calibrate', signalState: 'State', signalRecompute: 'recompute', signalClaim: 'Claim', signalControl: 'control'
@@ -72,9 +73,9 @@
       navResearch: '研究', navProjects: '项目', navProfile: '简介',
       heroEyebrow: '数学 × 可信人工智能',
       heroTitle: '我构建<span class="gradient-text">先验证、再信任的人工智能系统。</span>',
-      heroLede: '我是<strong>单夕航（Xihang Shan）</strong>，厦门大学数学与应用数学专业本科生。我的研究涉及可信机器学习、智能体、因果决策、神经算法推理与知识图谱。感谢本科导师<a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">周达教授</a>和<a class="mentor-link" href="https://scholar.xmu.edu.cn/Authors/Index?Year=2024&amp;id=LuoYe" target="_blank" rel="noopener">罗晔老师</a>的指导。',
+      heroLede: '我是<strong>单夕航（Xihang Shan）</strong>，厦门大学数学与应用数学专业本科生。我的研究涉及可信机器学习、智能体、因果决策、神经算法推理与知识图谱。感谢本科导师<a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">周达教授</a>和<a class="mentor-link" href="https://scholar.xmu.edu.cn/Authors/Index?id=LuoYe" target="_blank" rel="noopener">罗晔老师</a>的指导。',
       exploreResearch: '查看研究', getInTouch: '联系我',
-      localTime: '厦门时间', lastUpdated: '最后更新', pageViews: '浏览量', visitorIp: '访问者 IP',
+      localTime: '北京时间', lastUpdated: '最后更新', pageViews: '浏览量', visitorIp: 'IP', locationHongKong: '中国香港',
       selectedManuscripts: '代表性论文', researchTitle: '让模型先检验，再相信。',
       researchIntro: '围绕因果学习、智能体与图推理，我研究如何判断外部知识何时有效，以及模型何时应当拒绝使用它。',
       filterAll: '全部', filterCausal: '因果 AI', filterAgents: '智能体', filterGraphs: '图与推理',
@@ -110,16 +111,17 @@
       rcdaDescriptors: '审计描述量<br><small>边/关系 · 对称性 · 数据来源</small>', rcdaChecklist: '受控报告清单',
       rcdaNote: '架构结论取决于解码器、深度、数据集与训练配方。',
       rcdaDesc: '揭示解码器选择与训练配方如何混淆结构化知识图谱补全比较，并推动跨架构、跨数据集的受控报告。',
-      selectedProjects: '代表性项目', projectsTitle: '开放且可审查的研究系统。',
-      locsourceType: '01 / 空间组学 AI', locsourceDesc: '面向 Xenium 后分割分析的保守、可审计转录本归属提案。',
+      selectedProjects: '其它项目', projectsTitle: '开放且可审查的研究系统。',
+      locsourceType: '03 / 空间组学 AI', locsourceDesc: '面向 Xenium 后分割分析的保守、可审计转录本归属提案。',
       booleanType: '02 / 离散结构', booleanDesc: 'Walsh 谱仿射逼近、导数引导的仿射覆盖与前馈序列恢复。',
-      memoryType: '03 / 研究智能体', memoryDesc: '面向研究智能体的有界、主张相关记忆视图，以及失败关闭式证据审计。',
+      memoryType: '01 / 研究智能体', memoryDesc: '面向研究智能体的有界、主张相关记忆视图，以及失败关闭式证据审计。',
       repoReport: '代码与报告 ↗', openRepository: '查看代码仓库 ↗', educationRecognition: '教育经历与荣誉',
       xmu: '厦门大学', educationDegree: '数学与应用数学 理学学士<br>数学科学学院',
       honorOne: '<b>福建省一等奖</b><br>全国大学生数学建模竞赛 · 队长',
       honorTwo: '<b>福建省三等奖</b><br>全国大学生数学建模竞赛 · 队长',
       honorThree: '<b>优秀学员</b><br>密码与数学暑期学校 · 60 人中前 10',
-      contact: '联系', contactTitle: '欢迎交流不完备信息下的<br>可靠推理与决策。', emailMe: '发送邮件',
+      hobbies: '个人爱好', hobbiesTitle: '研究之外，也认真享受生活。', basketball: '篮球', basketballNote: 'NBA 资深球迷', billiards: '台球', piano: '钢琴', bridge: '桥牌',
+      contact: '联系', contactTitle: '欢迎交流与合作。', emailMe: '发送邮件',
       footerLine: '为清晰、证据与可审查性而构建。', backTop: '返回顶部 ↑',
       orbitCausal: '因果 AI', orbitAgents: '智能体', orbitGraphs: '图推理',
       signalPrior: '先验', signalCalibrate: '校准', signalState: '状态', signalRecompute: '重算', signalClaim: '主张', signalControl: '控制'
@@ -133,7 +135,7 @@
     return open ? 'Close navigation' : 'Open navigation';
   }
 
-  function formatShanghai(date) {
+  function formatBeijing(date) {
     const parts = new Intl.DateTimeFormat('en-CA', {
       timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit',
       hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
@@ -142,9 +144,9 @@
   }
 
   function refreshTimes() {
-    document.getElementById('current-time').textContent = formatShanghai(new Date());
+    document.getElementById('current-time').textContent = formatBeijing(new Date());
     const updatedAt = document.querySelector('.hero-meta').dataset.updated;
-    document.getElementById('last-updated').textContent = formatShanghai(new Date(updatedAt));
+    document.getElementById('last-updated').textContent = formatBeijing(new Date(updatedAt));
   }
 
   function applyLanguage(language) {
@@ -190,7 +192,6 @@
 
   async function loadLiveMeta() {
     const viewElement = document.getElementById('page-views');
-    const ipElement = document.getElementById('visitor-ip');
     const site = 'andyshan11.github.io';
     const path = '/';
     const base = 'https://page-views-api.ratneshc.com/api/v1';
@@ -203,13 +204,6 @@
       if (Number.isFinite(Number(data.views))) viewElement.textContent = Number(data.views).toLocaleString('en-US');
     } catch (_) {
       viewElement.textContent = '—';
-    }
-    try {
-      const response = await fetch('https://api.ip.sb/ip', { cache: 'no-store' });
-      const address = (await response.text()).trim();
-      ipElement.textContent = address || '—';
-    } catch (_) {
-      ipElement.textContent = '—';
     }
   }
   loadLiveMeta();
