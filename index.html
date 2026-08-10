@@ -49,24 +49,24 @@
     <header class="site-header" id="top">
       <nav class="nav shell" aria-label="Primary navigation">
         <a class="brand" href="#top" aria-label="Xihang Shan, home">
-          <span class="brand-mark">XS</span>
+          <span class="brand-mark">ANDY</span>
           <span class="brand-name">Xihang Shan</span>
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
           <span></span><span></span>
         </button>
         <div class="nav-links" id="nav-links">
-          <a href="#research">Research</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#profile">Profile</a>
+          <a href="#research" data-i18n="navResearch">Research</a>
+          <a href="#projects" data-i18n="navProjects">Projects</a>
+          <a href="#profile" data-i18n="navProfile">Profile</a>
         </div>
         <div class="nav-actions">
+          <button class="language-toggle" type="button" aria-label="Switch to Chinese">中文版</button>
           <button class="theme-toggle" type="button" aria-label="Switch color theme">
             <span class="sun" aria-hidden="true">☀</span>
             <span class="moon" aria-hidden="true">◐</span>
           </button>
-          <a class="nav-cv" href="assets/Xihang_Shan_CV_EN.pdf" target="_blank" rel="noopener">CV <span>↗</span></a>
+          <a class="nav-cv" href="assets/Xihang_Shan_CV_EN.pdf" target="_blank" rel="noopener"><span class="cv-label">CV</span> <span>↗</span></a>
         </div>
       </nav>
     </header>
@@ -75,29 +75,31 @@
       <section class="hero shell" aria-labelledby="hero-title">
         <canvas id="network-canvas" aria-hidden="true"></canvas>
         <div class="hero-copy">
-          <p class="eyebrow reveal">Mathematics × Trustworthy AI</p>
-          <h1 id="hero-title" class="reveal">
+          <p class="eyebrow reveal" data-i18n="heroEyebrow">Mathematics × Trustworthy AI</p>
+          <h1 id="hero-title" class="reveal" data-i18n-html="heroTitle">
             I build AI systems that
             <span class="gradient-text">test before they trust.</span>
           </h1>
-          <p class="hero-lede reveal">
-            I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research connects trustworthy machine learning, AI agents, causal decision-making, neural algorithmic reasoning, and knowledge graphs.
+          <p class="hero-lede reveal" data-i18n-html="heroLede">
+            I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research connects trustworthy machine learning, AI agents, causal decision-making, neural algorithmic reasoning, and knowledge graphs. I am grateful to my undergraduate mentors, <a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">Prof. Da Zhou</a> and <a class="mentor-link" href="https://scholar.xmu.edu.cn/Authors/Index?Year=2024&amp;id=LuoYe" target="_blank" rel="noopener">Prof. Ye Luo</a>, for their guidance.
           </p>
           <div class="hero-actions reveal">
-            <a class="button button-primary magnetic" href="#research">Explore research <span>↓</span></a>
-            <a class="button button-ghost" href="mailto:19020232202354@stu.xmu.edu.cn">Get in touch <span>↗</span></a>
+            <a class="button button-primary magnetic" href="#research"><span data-i18n="exploreResearch">Explore research</span> <span>↓</span></a>
+            <a class="button button-ghost" href="mailto:19020232202354@stu.xmu.edu.cn"><span data-i18n="getInTouch">Get in touch</span> <span>↗</span></a>
           </div>
-          <div class="hero-meta reveal" aria-label="Current profile">
-            <div><span class="pulse-dot"></span>Research portfolio · Aug 2026</div>
-            <div>Xiamen, China · UTC+8</div>
+          <div class="hero-meta reveal" aria-label="Live website information" data-updated="2026-08-10T23:29:48+08:00">
+            <div class="live-item"><span class="pulse-dot"></span><span class="live-label" data-i18n="localTime">Xiamen time</span><strong id="current-time">—</strong></div>
+            <div class="live-item"><span class="live-label" data-i18n="lastUpdated">Updated</span><strong id="last-updated">—</strong></div>
+            <div class="live-item"><span class="live-label" data-i18n="pageViews">Views</span><strong id="page-views">—</strong></div>
+            <div class="live-item"><span class="live-label" data-i18n="visitorIp">Visitor IP</span><strong id="visitor-ip">—</strong></div>
           </div>
         </div>
 
         <div class="hero-visual reveal" aria-hidden="true">
           <div class="orbit orbit-outer">
-            <span class="orbit-label label-one">Causal AI</span>
-            <span class="orbit-label label-two">Agents</span>
-            <span class="orbit-label label-three">Graphs</span>
+            <span class="orbit-label label-one" data-i18n="orbitCausal">Causal AI</span>
+            <span class="orbit-label label-two" data-i18n="orbitAgents">Agents</span>
+            <span class="orbit-label label-three" data-i18n="orbitGraphs">Graphs</span>
           </div>
           <div class="orbit orbit-inner"></div>
           <div class="monogram">
@@ -105,251 +107,281 @@
             <span>TEST</span>
             <span>REASON</span>
           </div>
-          <div class="signal-card signal-one"><b>Prior</b><span>calibrate</span></div>
-          <div class="signal-card signal-two"><b>State</b><span>recompute</span></div>
-          <div class="signal-card signal-three"><b>Claim</b><span>control</span></div>
+          <div class="signal-card signal-one"><b data-i18n="signalPrior">Prior</b><span data-i18n="signalCalibrate">calibrate</span></div>
+          <div class="signal-card signal-two"><b data-i18n="signalState">State</b><span data-i18n="signalRecompute">recompute</span></div>
+          <div class="signal-card signal-three"><b data-i18n="signalClaim">Claim</b><span data-i18n="signalControl">control</span></div>
         </div>
 
-        <div class="stat-strip reveal">
-          <div class="stat"><strong>6</strong><span>first-author manuscripts<br />under review</span></div>
-          <div class="stat"><strong>4/4/5</strong><span>NeurIPS post-rebuttal<br />reviews</span></div>
-          <div class="stat"><strong>3</strong><span>AAAI 2027 manuscripts<br />under review</span></div>
-          <div class="stat"><strong>2027</strong><span>expected<br />graduation</span></div>
-        </div>
       </section>
 
       <section class="section shell" id="research" aria-labelledby="research-title">
         <div class="section-heading reveal">
           <div>
-            <p class="eyebrow">Selected manuscripts</p>
-            <h2 id="research-title">Research that questions its assumptions.</h2>
+            <p class="eyebrow" data-i18n="selectedManuscripts">Selected manuscripts</p>
+            <h2 id="research-title" data-i18n="researchTitle">Research that questions its assumptions.</h2>
           </div>
-          <p>Across causal learning, agents, and graphs, I design controls that reveal when external knowledge helps—and when a model should refuse it.</p>
+          <p data-i18n="researchIntro">Across causal learning, agents, and graphs, I design controls that reveal when external knowledge helps—and when a model should refuse it.</p>
         </div>
 
         <div class="filter-bar reveal" role="group" aria-label="Filter publications">
-          <button class="filter active" type="button" data-filter="all">All <span>6</span></button>
-          <button class="filter" type="button" data-filter="causal">Causal AI <span>2</span></button>
-          <button class="filter" type="button" data-filter="agents">Agents <span>1</span></button>
-          <button class="filter" type="button" data-filter="graphs">Graphs & reasoning <span>3</span></button>
+          <button class="filter active" type="button" data-filter="all"><span data-i18n="filterAll">All</span> <span>6</span></button>
+          <button class="filter" type="button" data-filter="causal"><span data-i18n="filterCausal">Causal AI</span> <span>2</span></button>
+          <button class="filter" type="button" data-filter="agents"><span data-i18n="filterAgents">Agents</span> <span>1</span></button>
+          <button class="filter" type="button" data-filter="graphs"><span data-i18n="filterGraphs">Graphs & reasoning</span> <span>3</span></button>
         </div>
 
         <div class="publication-grid">
           <article class="pub-card featured reveal" data-topic="causal">
-            <a class="pub-visual" href="https://arxiv.org/pdf/2605.01669.pdf" target="_blank" rel="noopener" aria-label="Open the PRCD-MAP paper PDF">
-              <img src="assets/papers/prcd-map.png" alt="PRCD-MAP performance across sample sizes and prior qualities" loading="lazy" decoding="async" />
-              <span class="figure-label">Prior calibration overview</span>
+            <a class="pub-visual method-diagram diagram-prcd" href="https://arxiv.org/pdf/2605.01669.pdf" target="_blank" rel="noopener" aria-label="Open the PRCD-MAP paper PDF">
+              <div class="method-top"><span>PRCD-MAP</span><b data-i18n="prcdDiagramTitle">Calibrate trust before using a prior</b></div>
+              <div class="method-flow">
+                <div class="method-lane">
+                  <span class="flow-node" data-i18n="prcdData">Observational data</span>
+                  <span class="flow-node flow-warn" data-i18n="prcdPrior">Imperfect prior</span>
+                </div>
+                <div class="method-lane method-core">
+                  <span class="flow-node" data-i18n="prcdFeatures">Local edge features</span>
+                  <span class="flow-node flow-accent" data-i18n-html="prcdTrust">EB + topology MLP<br><small>per-edge trust τ</small></span>
+                </div>
+                <div class="method-lane">
+                  <span class="flow-node" data-i18n-html="prcdMap">Prior-aware MAP<br><small>adaptive ℓ₁ + ℓ₂</small></span>
+                  <span class="flow-node flow-output" data-i18n="prcdGraph">Calibrated causal graph</span>
+                </div>
+              </div>
+              <div class="method-note" data-i18n="prcdNote">Useful structure is retained; contradictions suppress trust.</div>
             </a>
             <div class="pub-info">
-              <div class="pub-topline"><span class="venue">NeurIPS 2026 · Under review</span><span class="index">01</span></div>
+              <div class="pub-topline"><span class="venue" data-i18n="venueNeurips">NeurIPS 2026 · Under review</span><span class="index">01</span></div>
               <h3>PRCD-MAP: Learning How Much to Trust Imperfect Priors in Causal Discovery</h3>
-              <p>Learns edge-specific trust from data, using useful prior structure while safely reverting to data-only discovery when the prior is misleading.</p>
-              <div class="review-note"><span></span>Post-rebuttal reviews: <strong>4/4/5</strong></div>
+              <p data-i18n="prcdDesc">Learns edge-specific trust from data, using useful prior structure while safely reverting to data-only discovery when the prior is misleading.</p>
+              <div class="review-note" data-i18n-html="reviewNote"><span></span>Post-rebuttal reviews: <strong>4/4/5</strong></div>
               <div class="pub-footer">
                 <span><b>Xihang Shan</b>, Da Zhou<sup>*</sup></span>
-                <a href="https://arxiv.org/pdf/2605.01669.pdf" target="_blank" rel="noopener">PDF ↗</a>
+                <span class="pub-links"><a href="https://arxiv.org/pdf/2605.01669.pdf" target="_blank" rel="noopener">PDF ↗</a><a href="https://github.com/AndyShan11/PRCD-MAP" target="_blank" rel="noopener">GitHub ↗</a></span>
               </div>
             </div>
           </article>
 
           <article class="pub-card reveal" data-topic="causal">
-            <a class="pub-visual" href="https://andyshan11.github.io/CDV/paper.pdf" target="_blank" rel="noopener" aria-label="Open the Testing Before Trusting paper PDF">
-              <img src="assets/papers/testing-before-trusting.png" alt="Component ablations for diagnostic recovery and wrong-graph safety" loading="lazy" decoding="async" />
-              <span class="figure-label">Diagnostic controls</span>
+            <a class="pub-visual method-diagram diagram-cdv" href="https://andyshan11.github.io/CDV/paper.pdf" target="_blank" rel="noopener" aria-label="Open the Testing Before Trusting paper PDF">
+              <div class="method-top"><span>CSB · CDV</span><b data-i18n="cdvDiagramTitle">Test competing causal worlds online</b></div>
+              <div class="method-flow">
+                <div class="method-lane">
+                  <span class="flow-node" data-i18n="cdvLogs">Historical logs</span>
+                  <span class="flow-node flow-warn" data-i18n="cdvAssumptions">Unreliable graph</span>
+                </div>
+                <div class="method-lane method-core">
+                  <span class="flow-node" data-i18n-html="cdvWorlds">Candidate worlds<br><small>naive · causal · cold</small></span>
+                  <span class="flow-node flow-accent" data-i18n="cdvProbe">Diagnostic action</span>
+                </div>
+                <div class="method-lane">
+                  <span class="flow-node" data-i18n="cdvEvidence">Online evidence</span>
+                  <span class="flow-node flow-output" data-i18n-html="cdvDecision">Rescue or veto<br><small>then choose an arm</small></span>
+                </div>
+              </div>
+              <div class="method-note method-loop" data-i18n="cdvNote">Prediction error continuously updates trust in every world.</div>
             </a>
             <div class="pub-info">
-              <div class="pub-topline"><span class="venue">AAAI 2027 · Under review</span><span class="index">02</span></div>
+              <div class="pub-topline"><span class="venue" data-i18n="venueAaai">AAAI 2027 · Under review</span><span class="index">02</span></div>
               <h3>Testing Before Trusting: Causal Skeptic Bandits under Unreliable Historical Evidence</h3>
-              <p>Treats historical causal knowledge as a hypothesis to be tested online; diagnostic falsification and a causal veto keep misleading graphs from steering decisions.</p>
+              <p data-i18n="cdvDesc">Treats historical causal knowledge as a hypothesis to be tested online; diagnostic falsification and a causal veto keep misleading graphs from steering decisions.</p>
               <div class="pub-footer">
                 <span><b>Xihang Shan</b></span>
-                <a href="https://andyshan11.github.io/CDV/paper.pdf" target="_blank" rel="noopener">PDF ↗</a>
+                <span class="pub-links"><a href="https://andyshan11.github.io/CDV/paper.pdf" target="_blank" rel="noopener">PDF ↗</a><a href="https://github.com/AndyShan11/CDV" target="_blank" rel="noopener">GitHub ↗</a></span>
               </div>
             </div>
           </article>
 
           <article class="pub-card reveal" data-topic="graphs">
-            <a class="pub-visual" href="https://andyshan11.github.io/Delta-NAR/paper.pdf" target="_blank" rel="noopener" aria-label="Open the DeltaNAR paper PDF">
-              <img src="assets/papers/deltanar.png" alt="DeltaNAR accuracy across graph sizes and edit regimes" loading="lazy" decoding="async" />
-              <span class="figure-label">Dynamic graph reasoning</span>
+            <a class="pub-visual method-diagram diagram-delta" href="https://andyshan11.github.io/Delta-NAR/paper.pdf" target="_blank" rel="noopener" aria-label="Open the DeltaNAR paper PDF">
+              <div class="method-top"><span>DeltaNAR</span><b data-i18n="deltaDiagramTitle">Copy what is safe; repair what changed</b></div>
+              <div class="method-flow">
+                <div class="method-lane">
+                  <span class="flow-node" data-i18n="deltaGraph">Post-edit graph</span>
+                  <span class="flow-node" data-i18n="deltaMemory">Previous solution</span>
+                  <span class="flow-node flow-warn" data-i18n="deltaEdit">Edit event</span>
+                </div>
+                <div class="method-lane method-core">
+                  <span class="flow-node" data-i18n-html="deltaProcess">Edit encoder<br><small>semiring messages</small></span>
+                  <span class="flow-node flow-accent" data-i18n-html="deltaGates">Two gates<br><small>affected · copy-safe</small></span>
+                </div>
+                <div class="method-lane split-lane">
+                  <span class="flow-node flow-safe" data-i18n="deltaCopy">Safe → copy</span>
+                  <span class="flow-node flow-repair" data-i18n="deltaRepair">Unsafe → recompute</span>
+                  <span class="flow-node flow-output" data-i18n="deltaOutput">Updated solution</span>
+                </div>
+              </div>
+              <div class="method-note" data-i18n="deltaNote">The old witness becomes a first-class computational resource.</div>
             </a>
             <div class="pub-info">
-              <div class="pub-topline"><span class="venue">AAAI 2027 · Under review</span><span class="index">03</span></div>
+              <div class="pub-topline"><span class="venue" data-i18n="venueAaai">AAAI 2027 · Under review</span><span class="index">03</span></div>
               <h3>DeltaNAR: Learning What to Reuse and What to Recompute in Neural Algorithmic Reasoning</h3>
-              <p>Separates state that remains valid after a graph update from state that must be recomputed, enabling incremental reasoning without unsafe copying.</p>
+              <p data-i18n="deltaDesc">Separates state that remains valid after a graph update from state that must be recomputed, enabling incremental reasoning without unsafe copying.</p>
               <div class="pub-footer">
                 <span><b>Xihang Shan</b>, Ye Luo<sup>*</sup></span>
-                <a href="https://andyshan11.github.io/Delta-NAR/paper.pdf" target="_blank" rel="noopener">PDF ↗</a>
+                <span class="pub-links"><a href="https://andyshan11.github.io/Delta-NAR/paper.pdf" target="_blank" rel="noopener">PDF ↗</a><a href="https://github.com/AndyShan11/Delta-NAR" target="_blank" rel="noopener">GitHub ↗</a></span>
               </div>
             </div>
           </article>
 
           <article class="pub-card reveal" data-topic="agents">
-            <a class="pub-visual" href="https://andyshan11.github.io/CDTG/paper.pdf" target="_blank" rel="noopener" aria-label="Open the Failure-Learning Claims Need Controls paper PDF">
-              <img src="assets/papers/failure-learning.png" alt="Metric stack linking failure-learning metrics to scientific questions" loading="lazy" decoding="async" />
-              <span class="figure-label">Claim-control metric stack</span>
+            <a class="pub-visual method-diagram diagram-claim" href="https://andyshan11.github.io/CDTG/paper.pdf" target="_blank" rel="noopener" aria-label="Open the Failure-Learning Claims Need Controls paper PDF">
+              <div class="method-top"><span>CLAIM CONTROL</span><b data-i18n="claimDiagramTitle">Name the claim before choosing the score</b></div>
+              <div class="method-flow">
+                <div class="method-lane">
+                  <span class="flow-node" data-i18n="claimFailure">Failed source plan</span>
+                  <span class="flow-node" data-i18n-html="claimTargets">Changed targets<br><small>positive · contrastive</small></span>
+                </div>
+                <div class="method-lane method-core">
+                  <span class="flow-node" data-i18n-html="claimPrompts">Evaluation probes<br><small>trace · reflection · invariant</small></span>
+                  <span class="flow-node flow-accent" data-i18n="claimOutputs">Frozen agent outputs</span>
+                </div>
+                <div class="method-lane metric-lane">
+                  <span class="flow-node" data-i18n-html="claimMetrics">Metric stack<br><small>exact · core · transfer · execution</small></span>
+                  <span class="flow-node flow-output" data-i18n="claimReport">Auditable claim report</span>
+                </div>
+              </div>
+              <div class="method-note" data-i18n="claimNote">The same output can support different conclusions under different controls.</div>
             </a>
             <div class="pub-info">
-              <div class="pub-topline"><span class="venue">AAAI 2027 · Under review</span><span class="index">04</span></div>
+              <div class="pub-topline"><span class="venue" data-i18n="venueAaai">AAAI 2027 · Under review</span><span class="index">04</span></div>
               <h3>Failure-Learning Claims Need Controls: A Claim-Control Evaluation of Language Agents</h3>
-              <p>Uses claim-matched controls to distinguish repair, transfer, target-solving, and executable validity from ordinary task success.</p>
+              <p data-i18n="claimDesc">Uses claim-matched controls to distinguish repair, transfer, target-solving, and executable validity from ordinary task success.</p>
               <div class="pub-footer">
                 <span><b>Xihang Shan</b></span>
-                <a href="https://andyshan11.github.io/CDTG/paper.pdf" target="_blank" rel="noopener">PDF ↗</a>
+                <span class="pub-links"><a href="https://andyshan11.github.io/CDTG/paper.pdf" target="_blank" rel="noopener">PDF ↗</a><a href="https://github.com/AndyShan11/CDTG" target="_blank" rel="noopener">GitHub ↗</a></span>
               </div>
             </div>
           </article>
 
           <article class="pub-card reveal" data-topic="graphs">
-            <a class="pub-visual" href="https://arxiv.org/pdf/2605.26645.pdf" target="_blank" rel="noopener" aria-label="Open the Bounded Path Context paper PDF">
-              <img src="assets/papers/bounded-path-context.png" alt="Visible path history sweep on WebQSP and CWQ" loading="lazy" decoding="async" />
-              <span class="figure-label">Visible-history sweep</span>
+            <a class="pub-visual method-diagram diagram-bpc" href="https://arxiv.org/pdf/2605.26645.pdf" target="_blank" rel="noopener" aria-label="Open the Bounded Path Context paper PDF">
+              <div class="method-top"><span>BPC</span><b data-i18n="bpcDiagramTitle">Keep full paths; expose only what routing needs</b></div>
+              <div class="method-flow">
+                <div class="method-lane">
+                  <span class="flow-node" data-i18n="bpcQuestion">Question + start entities</span>
+                  <span class="flow-node flow-safe" data-i18n-html="bpcMemory">Symbolic beam memory<br><small>complete paths retained</small></span>
+                </div>
+                <div class="method-lane method-core">
+                  <span class="flow-node flow-accent" data-i18n-html="bpcWindow">Visible suffix h<sub>K</sub><br><small>at most K hops</small></span>
+                  <span class="flow-node" data-i18n="bpcSelect">LLM relation selection</span>
+                </div>
+                <div class="method-lane">
+                  <span class="flow-node" data-i18n="bpcExpand">Expand + retain beam</span>
+                  <span class="flow-node flow-output" data-i18n="bpcAnswer">Full-path answer extraction</span>
+                </div>
+              </div>
+              <div class="method-note method-loop" data-i18n="bpcNote">Routing repeats with bounded text while exact state stays outside the prompt.</div>
             </a>
             <div class="pub-info">
-              <div class="pub-topline"><span class="venue">EMNLP 2026 · Under review</span><span class="index">05</span></div>
+              <div class="pub-topline"><span class="venue" data-i18n="venueEmnlp">EMNLP 2026 · Under review</span><span class="index">05</span></div>
               <h3>Bounded Path Context: Visible Path History in LLM-Based KGQA</h3>
-              <p>Uses bounded visible path history to reduce prompt exposure while preserving effective, auditable symbolic reasoning.</p>
+              <p data-i18n="bpcDesc">Uses bounded visible path history to reduce prompt exposure while preserving effective, auditable symbolic reasoning.</p>
               <div class="pub-footer">
                 <span><b>Xihang Shan</b>, Ye Luo<sup>*</sup></span>
-                <a href="https://arxiv.org/pdf/2605.26645.pdf" target="_blank" rel="noopener">PDF ↗</a>
+                <span class="pub-links"><a href="https://arxiv.org/pdf/2605.26645.pdf" target="_blank" rel="noopener">PDF ↗</a><a href="https://github.com/AndyShan11/Bounded-Path-Context" target="_blank" rel="noopener">GitHub ↗</a></span>
               </div>
             </div>
           </article>
 
           <article class="pub-card reveal" data-topic="graphs">
-            <a class="pub-visual" href="https://arxiv.org/pdf/2606.14492.pdf" target="_blank" rel="noopener" aria-label="Open the Recipe-Controlled Decoder Audit paper PDF">
-              <img src="assets/papers/decoder-audit.png" alt="Decoder and encoder MRR deltas across knowledge-graph datasets" loading="lazy" decoding="async" />
-              <span class="figure-label">Controlled decoder audit</span>
+            <a class="pub-visual method-diagram diagram-rcda" href="https://arxiv.org/pdf/2606.14492.pdf" target="_blank" rel="noopener" aria-label="Open the Recipe-Controlled Decoder Audit paper PDF">
+              <div class="method-top"><span>RCDA</span><b data-i18n="rcdaDiagramTitle">Hold the recipe fixed; expose hidden levers</b></div>
+              <div class="method-flow">
+                <div class="method-lane">
+                  <span class="flow-node" data-i18n="rcdaDatasets">Knowledge-graph datasets</span>
+                  <span class="flow-node flow-warn" data-i18n="rcdaRecipe">One fixed training recipe</span>
+                </div>
+                <div class="method-lane method-core">
+                  <span class="flow-node flow-grid" data-i18n-html="rcdaGrid">Matched grid<br><small>decoder × encoder depth</small></span>
+                  <span class="flow-node flow-accent" data-i18n="rcdaMetrics">MRR / Hits with seeds</span>
+                </div>
+                <div class="method-lane">
+                  <span class="flow-node" data-i18n-html="rcdaDescriptors">Audit descriptors<br><small>e/r · symmetry · provenance</small></span>
+                  <span class="flow-node flow-output" data-i18n="rcdaChecklist">Controlled reporting checklist</span>
+                </div>
+              </div>
+              <div class="method-note" data-i18n="rcdaNote">Architectural conclusions are conditioned on decoder, depth, data, and recipe.</div>
             </a>
             <div class="pub-info">
-              <div class="pub-topline"><span class="venue">PRICAI 2026 · Under review</span><span class="index">06</span></div>
+              <div class="pub-topline"><span class="venue" data-i18n="venuePricai">PRICAI 2026 · Under review</span><span class="index">06</span></div>
               <h3>Recipe-Controlled Decoder Audit for Structural Knowledge-Graph Completion</h3>
-              <p>Shows how decoder choice and training recipe can confound structural KGC comparisons, motivating controlled reporting across architectures and datasets.</p>
+              <p data-i18n="rcdaDesc">Shows how decoder choice and training recipe can confound structural KGC comparisons, motivating controlled reporting across architectures and datasets.</p>
               <div class="pub-footer">
                 <span><b>Xihang Shan</b>, Ye Luo<sup>*</sup></span>
-                <a href="https://arxiv.org/pdf/2606.14492.pdf" target="_blank" rel="noopener">PDF ↗</a>
+                <span class="pub-links"><a href="https://arxiv.org/pdf/2606.14492.pdf" target="_blank" rel="noopener">PDF ↗</a><a href="https://github.com/AndyShan11/kgc-decoder-audit" target="_blank" rel="noopener">GitHub ↗</a></span>
               </div>
             </div>
           </article>
         </div>
-        <p class="corresponding reveal"><sup>*</sup> Corresponding author.</p>
-      </section>
-
-      <section class="section section-tinted" id="experience" aria-labelledby="experience-title">
-        <div class="shell">
-          <div class="section-heading reveal">
-            <div>
-              <p class="eyebrow">Research experience</p>
-              <h2 id="experience-title">From mathematical structure to real data.</h2>
-            </div>
-            <p>Collaborations spanning spatial transcriptomics, causal discovery, graph reasoning, and Boolean-function structure.</p>
-          </div>
-
-          <div class="timeline">
-            <article class="timeline-item reveal">
-              <div class="timeline-marker"><span>26</span></div>
-              <div class="timeline-date">Jul 2026</div>
-              <div class="timeline-content">
-                <div class="timeline-title"><h3>Summer Research — LocSource</h3><a href="https://andyshan11.github.io/LocSource/paper.pdf" target="_blank" rel="noopener">Project PDF ↗</a></div>
-                <p class="institution">Hong Kong University of Science and Technology · with Prof. Can Yang</p>
-                <p>Designed candidate donors, interface-level aggregate evidence, abstention, and reversible per-RNA proposals for post-segmentation transcript ownership in Xenium spatial transcriptomics. Frozen rules were audited with held-out protein and spatial evidence.</p>
-              </div>
-            </article>
-
-            <article class="timeline-item reveal">
-              <div class="timeline-marker"><span>25</span></div>
-              <div class="timeline-date">Nov 2025 — Present</div>
-              <div class="timeline-content">
-                <div class="timeline-title"><h3>National Undergraduate Innovation & Entrepreneurship Training Program</h3><span class="badge">National-level</span></div>
-                <p class="institution">Xiamen University · with Prof. Da Zhou</p>
-                <p>Trust calibration for unreliable priors in causal discovery, forming the research foundation of PRCD-MAP.</p>
-              </div>
-            </article>
-
-            <article class="timeline-item reveal">
-              <div class="timeline-marker"><span>24</span></div>
-              <div class="timeline-date">Jul 2024 — Present</div>
-              <div class="timeline-content">
-                <div class="timeline-title"><h3>Graph Reasoning & Neural Algorithms</h3></div>
-                <p class="institution">Xiamen University · with Prof. Ye Luo</p>
-                <p>Research on DeltaNAR, bounded path context for KGQA, and recipe-controlled decoder audits for knowledge-graph completion.</p>
-              </div>
-            </article>
-          </div>
-        </div>
+        <p class="corresponding reveal" data-i18n-html="corresponding"><sup>*</sup> Corresponding author.</p>
       </section>
 
       <section class="section shell" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading reveal">
+        <div class="section-heading compact-heading reveal">
           <div>
-            <p class="eyebrow">Selected projects</p>
-            <h2 id="projects-title">Technical work beyond manuscripts.</h2>
+            <p class="eyebrow" id="projects-title" data-i18n="selectedProjects">Selected projects</p>
           </div>
-          <p>Project reports expose the assumptions, derivations, and audit boundaries behind the work—not just the final result.</p>
         </div>
 
         <div class="project-grid">
           <a class="project-card project-locsource reveal" href="https://github.com/AndyShan11/LocSource" target="_blank" rel="noopener">
             <div class="project-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
-            <div class="project-number">01 / Spatial AI</div>
+            <div class="project-number" data-i18n="locsourceType">01 / Spatial AI</div>
             <div class="project-body">
               <h3>LocSource</h3>
-              <p>Conservative, auditable transcript-ownership proposals for Xenium post-segmentation analysis.</p>
-              <span>Repository & report ↗</span>
+              <p data-i18n="locsourceDesc">Conservative, auditable transcript-ownership proposals for Xenium post-segmentation analysis.</p>
+              <span data-i18n="repoReport">Repository & report ↗</span>
             </div>
           </a>
 
           <a class="project-card project-boolean reveal" href="https://github.com/AndyShan11/Boolean-Function-Structure" target="_blank" rel="noopener">
             <div class="boolean-grid" aria-hidden="true"></div>
-            <div class="project-number">02 / Discrete structure</div>
+            <div class="project-number" data-i18n="booleanType">02 / Discrete structure</div>
             <div class="project-body">
               <h3>Boolean Function Structure</h3>
-              <p>Walsh-spectral affine approximation, derivative-guided affine covers, and feedforward sequence recovery.</p>
-              <span>Repository & report ↗</span>
+              <p data-i18n="booleanDesc">Walsh-spectral affine approximation, derivative-guided affine covers, and feedforward sequence recovery.</p>
+              <span data-i18n="repoReport">Repository & report ↗</span>
+            </div>
+          </a>
+
+          <a class="project-card project-memory reveal" href="https://github.com/AndyShan11/research-memory-auditor" target="_blank" rel="noopener">
+            <div class="memory-map" aria-hidden="true"><span></span><span></span><span></span><span></span><i></i><i></i><i></i></div>
+            <div class="project-number" data-i18n="memoryType">03 / Research agents</div>
+            <div class="project-body">
+              <h3>Research Memory Auditor</h3>
+              <p data-i18n="memoryDesc">Bounded, claim-relevant memory views and fail-closed evidence auditing for research agents.</p>
+              <span data-i18n="openRepository">Open repository ↗</span>
             </div>
           </a>
         </div>
       </section>
 
       <section class="section profile-section" id="profile" aria-labelledby="profile-title">
-        <div class="shell profile-grid">
+        <div class="shell profile-grid profile-single">
           <div class="profile-main reveal">
-            <p class="eyebrow">Education & recognition</p>
-            <h2 id="profile-title">A mathematical foundation for reliable AI.</h2>
+            <p class="eyebrow" id="profile-title" data-i18n="educationRecognition">Education & recognition</p>
             <div class="education-card">
               <div>
                 <span class="education-year">2023—2027</span>
-                <h3>Xiamen University</h3>
-                <p>B.S. in Mathematics and Applied Mathematics<br />School of Mathematical Sciences</p>
+                <h3 data-i18n="xmu">Xiamen University</h3>
+                <p data-i18n-html="educationDegree">B.S. in Mathematics and Applied Mathematics<br />School of Mathematical Sciences</p>
               </div>
             </div>
             <div class="honors">
-              <div><span>2025</span><p><b>Fujian First Prize</b><br />National Undergraduate Mathematical Modeling Contest · Team Leader</p></div>
-              <div><span>2024</span><p><b>Fujian Third Prize</b><br />National Undergraduate Mathematical Modeling Contest · Team Leader</p></div>
-              <div><span>2025</span><p><b>Outstanding Student</b><br />Cryptography & Mathematics Summer School · Top 10 of 60</p></div>
+              <div><span>2025</span><p data-i18n-html="honorOne"><b>Fujian First Prize</b><br />National Undergraduate Mathematical Modeling Contest · Team Leader</p></div>
+              <div><span>2024</span><p data-i18n-html="honorTwo"><b>Fujian Third Prize</b><br />National Undergraduate Mathematical Modeling Contest · Team Leader</p></div>
+              <div><span>2025</span><p data-i18n-html="honorThree"><b>Outstanding Student</b><br />Cryptography & Mathematics Summer School · Top 10 of 60</p></div>
             </div>
           </div>
-
-          <aside class="skill-panel reveal">
-            <p class="eyebrow">Toolkit</p>
-            <h3>Research stack</h3>
-            <div class="skill-group"><span>Programming</span><p>Python · C++17 · LaTeX · OpenMP</p></div>
-            <div class="skill-group"><span>ML / Graphs</span><p>PyTorch · PyG · DGL · vLLM</p></div>
-            <div class="skill-group"><span>Methods</span><p>Causal discovery · Bandits · Knowledge graphs · Controlled audits</p></div>
-            <div class="skill-group"><span>Languages</span><p>Mandarin Chinese · English (IELTS 6.5)</p></div>
-            <div class="cv-links">
-              <a href="assets/Xihang_Shan_CV_EN.pdf" target="_blank" rel="noopener">English CV <span>↗</span></a>
-              <a href="assets/Xihang_Shan_CV_CN.pdf" target="_blank" rel="noopener">中文简历 <span>↗</span></a>
-            </div>
-          </aside>
         </div>
       </section>
 
       <section class="contact shell reveal" aria-labelledby="contact-title">
-        <p class="eyebrow">Contact</p>
-        <h2 id="contact-title">Let’s discuss reliable reasoning<br />under imperfect information.</h2>
+        <p class="eyebrow" data-i18n="contact">Contact</p>
+        <h2 id="contact-title" data-i18n-html="contactTitle">Let’s discuss reliable reasoning<br />under imperfect information.</h2>
         <div class="contact-row">
-          <a class="button button-primary magnetic" href="mailto:19020232202354@stu.xmu.edu.cn">Email me <span>↗</span></a>
+          <a class="button button-primary magnetic" href="mailto:19020232202354@stu.xmu.edu.cn"><span data-i18n="emailMe">Email me</span> <span>↗</span></a>
           <a class="text-link" href="https://github.com/AndyShan11" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </section>
@@ -358,8 +390,8 @@
     <footer class="footer">
       <div class="shell">
         <span>© <span id="year"></span> Xihang Shan</span>
-        <span>Built for clarity, motion, and evidence.</span>
-        <a href="#top">Back to top ↑</a>
+        <span data-i18n="footerLine">Built for clarity, motion, and evidence.</span>
+        <a href="#top" data-i18n="backTop">Back to top ↑</a>
       </div>
     </footer>
 

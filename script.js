@@ -3,10 +3,172 @@
   const body = document.body;
   const header = document.querySelector('.site-header');
   const themeButton = document.querySelector('.theme-toggle');
+  const languageButton = document.querySelector('.language-toggle');
   const themeMeta = document.querySelector('meta[name="theme-color"]');
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
+  const cvLink = document.querySelector('.nav-cv');
+  const cvLabel = document.querySelector('.cv-label');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const copy = {
+    en: {
+      navResearch: 'Research', navProjects: 'Projects', navProfile: 'Profile',
+      heroEyebrow: 'Mathematics × Trustworthy AI',
+      heroTitle: 'I build AI systems that <span class="gradient-text">test before they trust.</span>',
+      heroLede: 'I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research connects trustworthy machine learning, AI agents, causal decision-making, neural algorithmic reasoning, and knowledge graphs. I am grateful to my undergraduate mentors, <a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">Prof. Da Zhou</a> and <a class="mentor-link" href="https://scholar.xmu.edu.cn/Authors/Index?Year=2024&amp;id=LuoYe" target="_blank" rel="noopener">Prof. Ye Luo</a>, for their guidance.',
+      exploreResearch: 'Explore research', getInTouch: 'Get in touch',
+      localTime: 'Xiamen time', lastUpdated: 'Updated', pageViews: 'Views', visitorIp: 'Visitor IP',
+      selectedManuscripts: 'Selected manuscripts', researchTitle: 'Research that questions its assumptions.',
+      researchIntro: 'Across causal learning, agents, and graphs, I design controls that reveal when external knowledge helps—and when a model should refuse it.',
+      filterAll: 'All', filterCausal: 'Causal AI', filterAgents: 'Agents', filterGraphs: 'Graphs & reasoning',
+      venueNeurips: 'NeurIPS 2026 · Under review', venueAaai: 'AAAI 2027 · Under review',
+      venueEmnlp: 'EMNLP 2026 · Under review', venuePricai: 'PRICAI 2026 · Under review',
+      reviewNote: '<span></span>Post-rebuttal reviews: <strong>4/4/5</strong>', corresponding: '<sup>*</sup> Corresponding author.',
+      prcdDiagramTitle: 'Calibrate trust before using a prior', prcdData: 'Observational data', prcdPrior: 'Imperfect prior',
+      prcdFeatures: 'Local edge features', prcdTrust: 'EB + topology MLP<br><small>per-edge trust τ</small>',
+      prcdMap: 'Prior-aware MAP<br><small>adaptive ℓ₁ + ℓ₂</small>', prcdGraph: 'Calibrated causal graph',
+      prcdNote: 'Useful structure is retained; contradictions suppress trust.',
+      prcdDesc: 'Learns edge-specific trust from data, using useful prior structure while safely reverting to data-only discovery when the prior is misleading.',
+      cdvDiagramTitle: 'Test competing causal worlds online', cdvLogs: 'Historical logs', cdvAssumptions: 'Unreliable graph',
+      cdvWorlds: 'Candidate worlds<br><small>naive · causal · cold</small>', cdvProbe: 'Diagnostic action', cdvEvidence: 'Online evidence',
+      cdvDecision: 'Rescue or veto<br><small>then choose an arm</small>', cdvNote: 'Prediction error continuously updates trust in every world.',
+      cdvDesc: 'Treats historical causal knowledge as a hypothesis to be tested online; diagnostic falsification and a causal veto keep misleading graphs from steering decisions.',
+      deltaDiagramTitle: 'Copy what is safe; repair what changed', deltaGraph: 'Post-edit graph', deltaMemory: 'Previous solution', deltaEdit: 'Edit event',
+      deltaProcess: 'Edit encoder<br><small>semiring messages</small>', deltaGates: 'Two gates<br><small>affected · copy-safe</small>',
+      deltaCopy: 'Safe → copy', deltaRepair: 'Unsafe → recompute', deltaOutput: 'Updated solution',
+      deltaNote: 'The old witness becomes a first-class computational resource.',
+      deltaDesc: 'Separates state that remains valid after a graph update from state that must be recomputed, enabling incremental reasoning without unsafe copying.',
+      claimDiagramTitle: 'Name the claim before choosing the score', claimFailure: 'Failed source plan',
+      claimTargets: 'Changed targets<br><small>positive · contrastive</small>', claimPrompts: 'Evaluation probes<br><small>trace · reflection · invariant</small>',
+      claimOutputs: 'Frozen agent outputs', claimMetrics: 'Metric stack<br><small>exact · core · transfer · execution</small>',
+      claimReport: 'Auditable claim report', claimNote: 'The same output can support different conclusions under different controls.',
+      claimDesc: 'Uses claim-matched controls to distinguish repair, transfer, target-solving, and executable validity from ordinary task success.',
+      bpcDiagramTitle: 'Keep full paths; expose only what routing needs', bpcQuestion: 'Question + start entities',
+      bpcMemory: 'Symbolic beam memory<br><small>complete paths retained</small>', bpcWindow: 'Visible suffix h<sub>K</sub><br><small>at most K hops</small>',
+      bpcSelect: 'LLM relation selection', bpcExpand: 'Expand + retain beam', bpcAnswer: 'Full-path answer extraction',
+      bpcNote: 'Routing repeats with bounded text while exact state stays outside the prompt.',
+      bpcDesc: 'Uses bounded visible path history to reduce prompt exposure while preserving effective, auditable symbolic reasoning.',
+      rcdaDiagramTitle: 'Hold the recipe fixed; expose hidden levers', rcdaDatasets: 'Knowledge-graph datasets', rcdaRecipe: 'One fixed training recipe',
+      rcdaGrid: 'Matched grid<br><small>decoder × encoder depth</small>', rcdaMetrics: 'MRR / Hits with seeds',
+      rcdaDescriptors: 'Audit descriptors<br><small>e/r · symmetry · provenance</small>', rcdaChecklist: 'Controlled reporting checklist',
+      rcdaNote: 'Architectural conclusions are conditioned on decoder, depth, data, and recipe.',
+      rcdaDesc: 'Shows how decoder choice and training recipe can confound structural KGC comparisons, motivating controlled reporting across architectures and datasets.',
+      selectedProjects: 'Selected projects', projectsTitle: 'Open, inspectable research systems.',
+      locsourceType: '01 / Spatial AI', locsourceDesc: 'Conservative, auditable transcript-ownership proposals for Xenium post-segmentation analysis.',
+      booleanType: '02 / Discrete structure', booleanDesc: 'Walsh-spectral affine approximation, derivative-guided affine covers, and feedforward sequence recovery.',
+      memoryType: '03 / Research agents', memoryDesc: 'Bounded, claim-relevant memory views and fail-closed evidence auditing for research agents.',
+      repoReport: 'Repository & report ↗', openRepository: 'Open repository ↗', educationRecognition: 'Education & recognition',
+      xmu: 'Xiamen University', educationDegree: 'B.S. in Mathematics and Applied Mathematics<br>School of Mathematical Sciences',
+      honorOne: '<b>Fujian First Prize</b><br>National Undergraduate Mathematical Modeling Contest · Team Leader',
+      honorTwo: '<b>Fujian Third Prize</b><br>National Undergraduate Mathematical Modeling Contest · Team Leader',
+      honorThree: '<b>Outstanding Student</b><br>Cryptography & Mathematics Summer School · Top 10 of 60',
+      contact: 'Contact', contactTitle: 'Let’s discuss reliable reasoning<br>under imperfect information.', emailMe: 'Email me',
+      footerLine: 'Built for clarity, motion, and evidence.', backTop: 'Back to top ↑',
+      orbitCausal: 'Causal AI', orbitAgents: 'Agents', orbitGraphs: 'Graphs',
+      signalPrior: 'Prior', signalCalibrate: 'calibrate', signalState: 'State', signalRecompute: 'recompute', signalClaim: 'Claim', signalControl: 'control'
+    },
+    zh: {
+      navResearch: '研究', navProjects: '项目', navProfile: '简介',
+      heroEyebrow: '数学 × 可信人工智能',
+      heroTitle: '我构建<span class="gradient-text">先验证、再信任的人工智能系统。</span>',
+      heroLede: '我是<strong>单夕航（Xihang Shan）</strong>，厦门大学数学与应用数学专业本科生。我的研究涉及可信机器学习、智能体、因果决策、神经算法推理与知识图谱。感谢本科导师<a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">周达教授</a>和<a class="mentor-link" href="https://scholar.xmu.edu.cn/Authors/Index?Year=2024&amp;id=LuoYe" target="_blank" rel="noopener">罗晔老师</a>的指导。',
+      exploreResearch: '查看研究', getInTouch: '联系我',
+      localTime: '厦门时间', lastUpdated: '最后更新', pageViews: '浏览量', visitorIp: '访问者 IP',
+      selectedManuscripts: '代表性论文', researchTitle: '让模型先检验，再相信。',
+      researchIntro: '围绕因果学习、智能体与图推理，我研究如何判断外部知识何时有效，以及模型何时应当拒绝使用它。',
+      filterAll: '全部', filterCausal: '因果 AI', filterAgents: '智能体', filterGraphs: '图与推理',
+      venueNeurips: 'NeurIPS 2026 · 审稿中', venueAaai: 'AAAI 2027 · 审稿中',
+      venueEmnlp: 'EMNLP 2026 · 审稿中', venuePricai: 'PRICAI 2026 · 审稿中',
+      reviewNote: '<span></span>Rebuttal 后评分：<strong>4/4/5</strong>', corresponding: '<sup>*</sup> 通讯作者。',
+      prcdDiagramTitle: '先校准信任，再使用先验', prcdData: '观测数据', prcdPrior: '不可靠先验',
+      prcdFeatures: '局部边特征', prcdTrust: '经验贝叶斯 + 拓扑 MLP<br><small>逐边信任度 τ</small>',
+      prcdMap: '先验感知 MAP<br><small>自适应 ℓ₁ + ℓ₂</small>', prcdGraph: '校准后的因果图',
+      prcdNote: '保留有用结构；数据矛盾会压低信任。',
+      prcdDesc: '从数据中学习逐边信任度：先验可靠时利用其结构，先验误导时自动退回以数据为主的因果发现。',
+      cdvDiagramTitle: '在线检验相互竞争的因果世界', cdvLogs: '历史日志', cdvAssumptions: '不可靠因果图',
+      cdvWorlds: '候选世界<br><small>朴素 · 因果 · 冷启动</small>', cdvProbe: '诊断性动作', cdvEvidence: '在线干预证据',
+      cdvDecision: '救援或否决<br><small>随后选择动作</small>', cdvNote: '预测误差持续更新每个候选世界的信任权重。',
+      cdvDesc: '把历史因果知识视为需要在线检验的假设；通过诊断性证伪和因果否决，避免错误图结构主导决策。',
+      deltaDiagramTitle: '安全的状态直接复用，变化的部分局部修复', deltaGraph: '编辑后的图', deltaMemory: '上一时刻解', deltaEdit: '局部编辑事件',
+      deltaProcess: '编辑编码器<br><small>半环消息传递</small>', deltaGates: '双门控<br><small>受影响区 · 复制安全</small>',
+      deltaCopy: '安全 → 复制', deltaRepair: '不安全 → 重算', deltaOutput: '更新后的解',
+      deltaNote: '将旧解从普通特征变成可直接复用的计算资源。',
+      deltaDesc: '区分图更新后仍然有效的状态与必须重新计算的状态，实现避免不安全复制的增量推理。',
+      claimDiagramTitle: '先明确科学主张，再选择评价指标', claimFailure: '失败的源任务计划',
+      claimTargets: '发生变化的目标任务<br><small>正迁移 · 对照迁移</small>', claimPrompts: '评价探针<br><small>轨迹 · 反思 · 不变量</small>',
+      claimOutputs: '冻结的智能体输出', claimMetrics: '指标栈<br><small>精确 · 核心 · 迁移 · 执行</small>',
+      claimReport: '可审计的主张报告', claimNote: '同一输出在不同控制条件下可能支持完全不同的结论。',
+      claimDesc: '以主张匹配的控制实验，将修复、迁移、目标求解与可执行有效性从普通任务成功率中分离出来。',
+      bpcDiagramTitle: '保留完整路径，只向模型暴露路由所需部分', bpcQuestion: '问题 + 起始实体',
+      bpcMemory: '符号化束搜索记忆<br><small>完整路径始终保留</small>', bpcWindow: '可见后缀 h<sub>K</sub><br><small>最多 K 跳</small>',
+      bpcSelect: 'LLM 关系选择', bpcExpand: '扩展并保留候选路径', bpcAnswer: '基于完整路径提取答案',
+      bpcNote: '路由时重复使用有界文本，精确符号状态始终保存在提示词之外。',
+      bpcDesc: '限制模型可见的路径历史，在减少提示词暴露的同时保留有效且可审计的符号推理。',
+      rcdaDiagramTitle: '固定训练配方，暴露被隐藏的结构变量', rcdaDatasets: '知识图谱数据集', rcdaRecipe: '统一训练配方',
+      rcdaGrid: '匹配实验网格<br><small>解码器 × 编码器深度</small>', rcdaMetrics: '多随机种子的 MRR / Hits',
+      rcdaDescriptors: '审计描述量<br><small>边/关系 · 对称性 · 数据来源</small>', rcdaChecklist: '受控报告清单',
+      rcdaNote: '架构结论取决于解码器、深度、数据集与训练配方。',
+      rcdaDesc: '揭示解码器选择与训练配方如何混淆结构化知识图谱补全比较，并推动跨架构、跨数据集的受控报告。',
+      selectedProjects: '代表性项目', projectsTitle: '开放且可审查的研究系统。',
+      locsourceType: '01 / 空间组学 AI', locsourceDesc: '面向 Xenium 后分割分析的保守、可审计转录本归属提案。',
+      booleanType: '02 / 离散结构', booleanDesc: 'Walsh 谱仿射逼近、导数引导的仿射覆盖与前馈序列恢复。',
+      memoryType: '03 / 研究智能体', memoryDesc: '面向研究智能体的有界、主张相关记忆视图，以及失败关闭式证据审计。',
+      repoReport: '代码与报告 ↗', openRepository: '查看代码仓库 ↗', educationRecognition: '教育经历与荣誉',
+      xmu: '厦门大学', educationDegree: '数学与应用数学 理学学士<br>数学科学学院',
+      honorOne: '<b>福建省一等奖</b><br>全国大学生数学建模竞赛 · 队长',
+      honorTwo: '<b>福建省三等奖</b><br>全国大学生数学建模竞赛 · 队长',
+      honorThree: '<b>优秀学员</b><br>密码与数学暑期学校 · 60 人中前 10',
+      contact: '联系', contactTitle: '欢迎交流不完备信息下的<br>可靠推理与决策。', emailMe: '发送邮件',
+      footerLine: '为清晰、证据与可审查性而构建。', backTop: '返回顶部 ↑',
+      orbitCausal: '因果 AI', orbitAgents: '智能体', orbitGraphs: '图推理',
+      signalPrior: '先验', signalCalibrate: '校准', signalState: '状态', signalRecompute: '重算', signalClaim: '主张', signalControl: '控制'
+    }
+  };
+
+  let currentLanguage = localStorage.getItem('xihang-language') === 'zh' ? 'zh' : 'en';
+
+  function navigationLabel(open) {
+    if (currentLanguage === 'zh') return open ? '关闭导航' : '打开导航';
+    return open ? 'Close navigation' : 'Open navigation';
+  }
+
+  function formatShanghai(date) {
+    const parts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+    }).formatToParts(date).reduce((map, part) => ((map[part.type] = part.value), map), {});
+    return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second} UTC+8`;
+  }
+
+  function refreshTimes() {
+    document.getElementById('current-time').textContent = formatShanghai(new Date());
+    const updatedAt = document.querySelector('.hero-meta').dataset.updated;
+    document.getElementById('last-updated').textContent = formatShanghai(new Date(updatedAt));
+  }
+
+  function applyLanguage(language) {
+    currentLanguage = language;
+    root.lang = language === 'zh' ? 'zh-CN' : 'en';
+    root.dataset.language = language;
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const value = copy[language][element.dataset.i18n];
+      if (value) element.textContent = value;
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(element => {
+      const value = copy[language][element.dataset.i18nHtml];
+      if (value) element.innerHTML = value;
+    });
+    languageButton.textContent = language === 'zh' ? 'English' : '中文版';
+    languageButton.setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切换到中文');
+    cvLink.href = language === 'zh' ? 'assets/Xihang_Shan_CV_CN.pdf' : 'assets/Xihang_Shan_CV_EN.pdf';
+    cvLabel.textContent = language === 'zh' ? '简历' : 'CV';
+    navToggle.setAttribute('aria-label', navigationLabel(navToggle.getAttribute('aria-expanded') === 'true'));
+    document.querySelector('.skip-link').textContent = language === 'zh' ? '跳到正文' : 'Skip to content';
+    document.title = language === 'zh' ? '单夕航 — 可信与结构化人工智能' : 'Xihang Shan — Trustworthy & Structured AI';
+    localStorage.setItem('xihang-language', language);
+    refreshTimes();
+  }
 
   const savedTheme = localStorage.getItem('xihang-theme');
   const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
@@ -21,9 +183,40 @@
     themeMeta.setAttribute('content', next === 'light' ? '#f5f8f6' : '#07111a');
   });
 
+  languageButton.addEventListener('click', () => applyLanguage(currentLanguage === 'en' ? 'zh' : 'en'));
+  applyLanguage(currentLanguage);
+  refreshTimes();
+  setInterval(refreshTimes, 1000);
+
+  async function loadLiveMeta() {
+    const viewElement = document.getElementById('page-views');
+    const ipElement = document.getElementById('visitor-ip');
+    const site = 'andyshan11.github.io';
+    const path = '/';
+    const base = 'https://page-views-api.ratneshc.com/api/v1';
+    try {
+      if (location.hostname === site) {
+        await fetch(`${base}/track?site=${encodeURIComponent(site)}&path=${encodeURIComponent(path)}`, { cache: 'no-store', keepalive: true });
+      }
+      const response = await fetch(`${base}/views?site=${encodeURIComponent(site)}&path=${encodeURIComponent(path)}`, { cache: 'no-store' });
+      const data = await response.json();
+      if (Number.isFinite(Number(data.views))) viewElement.textContent = Number(data.views).toLocaleString('en-US');
+    } catch (_) {
+      viewElement.textContent = '—';
+    }
+    try {
+      const response = await fetch('https://api.ip.sb/ip', { cache: 'no-store' });
+      const address = (await response.text()).trim();
+      ipElement.textContent = address || '—';
+    } catch (_) {
+      ipElement.textContent = '—';
+    }
+  }
+  loadLiveMeta();
+
   const closeNav = () => {
     navToggle.setAttribute('aria-expanded', 'false');
-    navToggle.setAttribute('aria-label', 'Open navigation');
+    navToggle.setAttribute('aria-label', navigationLabel(false));
     navLinks.classList.remove('open');
     body.classList.remove('nav-open');
   };
@@ -31,7 +224,7 @@
   navToggle.addEventListener('click', () => {
     const open = navToggle.getAttribute('aria-expanded') !== 'true';
     navToggle.setAttribute('aria-expanded', String(open));
-    navToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    navToggle.setAttribute('aria-label', navigationLabel(open));
     navLinks.classList.toggle('open', open);
     body.classList.toggle('nav-open', open);
   });
@@ -85,7 +278,7 @@
         const rect = card.getBoundingClientRect();
         const x = (event.clientX - rect.left) / rect.width - .5;
         const y = (event.clientY - rect.top) / rect.height - .5;
-        card.style.transform = `perspective(900px) rotateX(${-y * 2.5}deg) rotateY(${x * 2.5}deg) translateY(-2px)`;
+        card.style.transform = `perspective(900px) rotateX(${-y * 2.2}deg) rotateY(${x * 2.2}deg) translateY(-2px)`;
       });
       card.addEventListener('pointerleave', () => { card.style.transform = ''; });
     });
@@ -145,7 +338,6 @@
       ctx.arc(particle.x, particle.y, particle.r, 0, Math.PI * 2);
       ctx.fillStyle = light ? 'rgba(8,127,109,.38)' : 'rgba(105,231,204,.42)';
       ctx.fill();
-
       for (let j = index + 1; j < particles.length; j++) {
         const other = particles[j];
         const distance = Math.hypot(particle.x - other.x, particle.y - other.y);
