@@ -101,8 +101,9 @@
           </div>
           <div class="orbit orbit-inner"></div>
           <div class="monogram">
-            <span>XS</span>
-            <small>TRUST · TEST · REASON</small>
+            <span>TRUST</span>
+            <span>TEST</span>
+            <span>REASON</span>
           </div>
           <div class="signal-card signal-one"><b>Prior</b><span>calibrate</span></div>
           <div class="signal-card signal-two"><b>State</b><span>recompute</span></div>
@@ -112,7 +113,7 @@
         <div class="stat-strip reveal">
           <div class="stat"><strong>6</strong><span>first-author manuscripts<br />under review</span></div>
           <div class="stat"><strong>4/4/5</strong><span>NeurIPS post-rebuttal<br />reviews</span></div>
-          <div class="stat"><strong>7/39</strong><span>class rank<br />GPA 85.94/100</span></div>
+          <div class="stat"><strong>3</strong><span>AAAI 2027 manuscripts<br />under review</span></div>
           <div class="stat"><strong>2027</strong><span>expected<br />graduation</span></div>
         </div>
       </section>
@@ -135,63 +136,99 @@
 
         <div class="publication-grid">
           <article class="pub-card featured reveal" data-topic="causal">
-            <div class="pub-topline"><span class="venue">NeurIPS 2026 · Under review</span><span class="index">01</span></div>
-            <h3>PRCD-MAP: Learning How Much to Trust Imperfect Priors in Causal Discovery</h3>
-            <p>Learns edge-specific trust from data, using useful prior structure while safely reverting to data-only discovery when the prior is misleading.</p>
-            <div class="review-note"><span></span>Post-rebuttal reviews: <strong>4/4/5</strong></div>
-            <div class="pub-footer">
-              <span><b>Xihang Shan</b>, Da Zhou<sup>*</sup></span>
-              <a href="https://arxiv.org/pdf/2605.01669.pdf" target="_blank" rel="noopener">PDF ↗</a>
+            <a class="pub-visual" href="https://arxiv.org/pdf/2605.01669.pdf" target="_blank" rel="noopener" aria-label="Open the PRCD-MAP paper PDF">
+              <img src="assets/papers/prcd-map.png" alt="PRCD-MAP performance across sample sizes and prior qualities" loading="lazy" decoding="async" />
+              <span class="figure-label">Prior calibration overview</span>
+            </a>
+            <div class="pub-info">
+              <div class="pub-topline"><span class="venue">NeurIPS 2026 · Under review</span><span class="index">01</span></div>
+              <h3>PRCD-MAP: Learning How Much to Trust Imperfect Priors in Causal Discovery</h3>
+              <p>Learns edge-specific trust from data, using useful prior structure while safely reverting to data-only discovery when the prior is misleading.</p>
+              <div class="review-note"><span></span>Post-rebuttal reviews: <strong>4/4/5</strong></div>
+              <div class="pub-footer">
+                <span><b>Xihang Shan</b>, Da Zhou<sup>*</sup></span>
+                <a href="https://arxiv.org/pdf/2605.01669.pdf" target="_blank" rel="noopener">PDF ↗</a>
+              </div>
             </div>
           </article>
 
           <article class="pub-card reveal" data-topic="causal">
-            <div class="pub-topline"><span class="venue">AAAI 2027 · Under review</span><span class="index">02</span></div>
-            <h3>Testing Before Trusting: Causal Skeptic Bandits under Unreliable Historical Evidence</h3>
-            <p>Treats historical causal knowledge as a hypothesis to be tested online; diagnostic falsification and a causal veto keep misleading graphs from steering decisions.</p>
-            <div class="pub-footer">
-              <span><b>Xihang Shan</b></span>
-              <a href="https://andyshan11.github.io/CDV/paper.pdf" target="_blank" rel="noopener">PDF ↗</a>
+            <a class="pub-visual" href="https://andyshan11.github.io/CDV/paper.pdf" target="_blank" rel="noopener" aria-label="Open the Testing Before Trusting paper PDF">
+              <img src="assets/papers/testing-before-trusting.png" alt="Component ablations for diagnostic recovery and wrong-graph safety" loading="lazy" decoding="async" />
+              <span class="figure-label">Diagnostic controls</span>
+            </a>
+            <div class="pub-info">
+              <div class="pub-topline"><span class="venue">AAAI 2027 · Under review</span><span class="index">02</span></div>
+              <h3>Testing Before Trusting: Causal Skeptic Bandits under Unreliable Historical Evidence</h3>
+              <p>Treats historical causal knowledge as a hypothesis to be tested online; diagnostic falsification and a causal veto keep misleading graphs from steering decisions.</p>
+              <div class="pub-footer">
+                <span><b>Xihang Shan</b></span>
+                <a href="https://andyshan11.github.io/CDV/paper.pdf" target="_blank" rel="noopener">PDF ↗</a>
+              </div>
             </div>
           </article>
 
           <article class="pub-card reveal" data-topic="graphs">
-            <div class="pub-topline"><span class="venue">AAAI 2027 · Under review</span><span class="index">03</span></div>
-            <h3>DeltaNAR: Learning What to Reuse and What to Recompute in Neural Algorithmic Reasoning</h3>
-            <p>Separates state that remains valid after a graph update from state that must be recomputed, enabling incremental reasoning without unsafe copying.</p>
-            <div class="pub-footer">
-              <span><b>Xihang Shan</b>, Ye Luo<sup>*</sup></span>
-              <a href="https://andyshan11.github.io/Delta-NAR/paper.pdf" target="_blank" rel="noopener">PDF ↗</a>
+            <a class="pub-visual" href="https://andyshan11.github.io/Delta-NAR/paper.pdf" target="_blank" rel="noopener" aria-label="Open the DeltaNAR paper PDF">
+              <img src="assets/papers/deltanar.png" alt="DeltaNAR accuracy across graph sizes and edit regimes" loading="lazy" decoding="async" />
+              <span class="figure-label">Dynamic graph reasoning</span>
+            </a>
+            <div class="pub-info">
+              <div class="pub-topline"><span class="venue">AAAI 2027 · Under review</span><span class="index">03</span></div>
+              <h3>DeltaNAR: Learning What to Reuse and What to Recompute in Neural Algorithmic Reasoning</h3>
+              <p>Separates state that remains valid after a graph update from state that must be recomputed, enabling incremental reasoning without unsafe copying.</p>
+              <div class="pub-footer">
+                <span><b>Xihang Shan</b>, Ye Luo<sup>*</sup></span>
+                <a href="https://andyshan11.github.io/Delta-NAR/paper.pdf" target="_blank" rel="noopener">PDF ↗</a>
+              </div>
             </div>
           </article>
 
           <article class="pub-card reveal" data-topic="agents">
-            <div class="pub-topline"><span class="venue">AAAI 2027 · Under review</span><span class="index">04</span></div>
-            <h3>Failure-Learning Claims Need Controls: A Claim-Control Evaluation of Language Agents</h3>
-            <p>Uses claim-matched controls to distinguish repair, transfer, target-solving, and executable validity from ordinary task success.</p>
-            <div class="pub-footer">
-              <span><b>Xihang Shan</b></span>
-              <a href="https://andyshan11.github.io/CDTG/paper.pdf" target="_blank" rel="noopener">PDF ↗</a>
+            <a class="pub-visual" href="https://andyshan11.github.io/CDTG/paper.pdf" target="_blank" rel="noopener" aria-label="Open the Failure-Learning Claims Need Controls paper PDF">
+              <img src="assets/papers/failure-learning.png" alt="Metric stack linking failure-learning metrics to scientific questions" loading="lazy" decoding="async" />
+              <span class="figure-label">Claim-control metric stack</span>
+            </a>
+            <div class="pub-info">
+              <div class="pub-topline"><span class="venue">AAAI 2027 · Under review</span><span class="index">04</span></div>
+              <h3>Failure-Learning Claims Need Controls: A Claim-Control Evaluation of Language Agents</h3>
+              <p>Uses claim-matched controls to distinguish repair, transfer, target-solving, and executable validity from ordinary task success.</p>
+              <div class="pub-footer">
+                <span><b>Xihang Shan</b></span>
+                <a href="https://andyshan11.github.io/CDTG/paper.pdf" target="_blank" rel="noopener">PDF ↗</a>
+              </div>
             </div>
           </article>
 
           <article class="pub-card reveal" data-topic="graphs">
-            <div class="pub-topline"><span class="venue">EMNLP 2026 · Under review</span><span class="index">05</span></div>
-            <h3>Bounded Path Context: Visible Path History in LLM-Based KGQA</h3>
-            <p>Uses bounded visible path history to reduce prompt exposure while preserving effective, auditable symbolic reasoning.</p>
-            <div class="pub-footer">
-              <span><b>Xihang Shan</b>, Ye Luo<sup>*</sup></span>
-              <a href="https://arxiv.org/pdf/2605.26645.pdf" target="_blank" rel="noopener">PDF ↗</a>
+            <a class="pub-visual" href="https://arxiv.org/pdf/2605.26645.pdf" target="_blank" rel="noopener" aria-label="Open the Bounded Path Context paper PDF">
+              <img src="assets/papers/bounded-path-context.png" alt="Visible path history sweep on WebQSP and CWQ" loading="lazy" decoding="async" />
+              <span class="figure-label">Visible-history sweep</span>
+            </a>
+            <div class="pub-info">
+              <div class="pub-topline"><span class="venue">EMNLP 2026 · Under review</span><span class="index">05</span></div>
+              <h3>Bounded Path Context: Visible Path History in LLM-Based KGQA</h3>
+              <p>Uses bounded visible path history to reduce prompt exposure while preserving effective, auditable symbolic reasoning.</p>
+              <div class="pub-footer">
+                <span><b>Xihang Shan</b>, Ye Luo<sup>*</sup></span>
+                <a href="https://arxiv.org/pdf/2605.26645.pdf" target="_blank" rel="noopener">PDF ↗</a>
+              </div>
             </div>
           </article>
 
           <article class="pub-card reveal" data-topic="graphs">
-            <div class="pub-topline"><span class="venue">PRICAI 2026 · Under review</span><span class="index">06</span></div>
-            <h3>Recipe-Controlled Decoder Audit for Structural Knowledge-Graph Completion</h3>
-            <p>Shows how decoder choice and training recipe can confound structural KGC comparisons, motivating controlled reporting across architectures and datasets.</p>
-            <div class="pub-footer">
-              <span><b>Xihang Shan</b>, Ye Luo<sup>*</sup></span>
-              <a href="https://arxiv.org/pdf/2606.14492.pdf" target="_blank" rel="noopener">PDF ↗</a>
+            <a class="pub-visual" href="https://arxiv.org/pdf/2606.14492.pdf" target="_blank" rel="noopener" aria-label="Open the Recipe-Controlled Decoder Audit paper PDF">
+              <img src="assets/papers/decoder-audit.png" alt="Decoder and encoder MRR deltas across knowledge-graph datasets" loading="lazy" decoding="async" />
+              <span class="figure-label">Controlled decoder audit</span>
+            </a>
+            <div class="pub-info">
+              <div class="pub-topline"><span class="venue">PRICAI 2026 · Under review</span><span class="index">06</span></div>
+              <h3>Recipe-Controlled Decoder Audit for Structural Knowledge-Graph Completion</h3>
+              <p>Shows how decoder choice and training recipe can confound structural KGC comparisons, motivating controlled reporting across architectures and datasets.</p>
+              <div class="pub-footer">
+                <span><b>Xihang Shan</b>, Ye Luo<sup>*</sup></span>
+                <a href="https://arxiv.org/pdf/2606.14492.pdf" target="_blank" rel="noopener">PDF ↗</a>
+              </div>
             </div>
           </article>
         </div>
@@ -285,7 +322,6 @@
                 <h3>Xiamen University</h3>
                 <p>B.S. in Mathematics and Applied Mathematics<br />School of Mathematical Sciences</p>
               </div>
-              <div class="education-score"><strong>85.94</strong><span>/ 100 · Rank 7/39</span></div>
             </div>
             <div class="honors">
               <div><span>2025</span><p><b>Fujian First Prize</b><br />National Undergraduate Mathematical Modeling Contest · Team Leader</p></div>
