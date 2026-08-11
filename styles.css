@@ -63,7 +63,7 @@ button { color: inherit; font: inherit; }
 .site-header.scrolled { border-color: var(--line); background: var(--header-bg); backdrop-filter: blur(20px) saturate(150%); }
 .nav { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; font-weight: 680; letter-spacing: -.02em; }
-.brand-mark { display: grid; place-items: center; width: 50px; height: 34px; border: 1px solid var(--line-strong); border-radius: 10px; color: var(--accent); font: 750 10px/1 ui-monospace, monospace; letter-spacing: .08em; background: linear-gradient(145deg, rgba(197,163,255,.12), transparent); }
+.brand-mark { display: grid; place-items: center; width: 60px; height: 34px; border: 1px solid var(--line-strong); border-radius: 10px; color: var(--accent); font: 750 10px/1 ui-monospace, monospace; letter-spacing: .08em; background: linear-gradient(145deg, rgba(197,163,255,.12), transparent); }
 .brand-name { font-size: 15px; }
 .nav-links { display: flex; align-items: center; gap: 30px; margin-left: auto; }
 .nav-links a { position: relative; color: var(--text-soft); font-size: 14px; transition: color .2s ease; }
