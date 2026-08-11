@@ -24,3 +24,10 @@ Then open `http://localhost:8000`.
 ## Content updates
 
 Edit `index.html` for publications and experience, `styles.css` for design, and `script.js` for interactions. GitHub Pages serves the `main` branch directly.
+
+## Publication media
+
+Run `python tools/generate_publication_figures.py` for static posters. Run
+`python tools/generate_publication_animations.py` for the posters plus the
+8-second model-process videos. Each scene animates a real method state rather
+than adding decorative motion to a static figure.
