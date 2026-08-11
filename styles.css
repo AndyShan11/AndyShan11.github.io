@@ -96,13 +96,29 @@ button { color: inherit; font: inherit; }
 .hero-lede strong { color: var(--text); font-weight: 650; }
 .mentor-link { color: var(--text); border-bottom: 1px solid var(--line-strong); transition: color .2s, border-color .2s; }
 .mentor-link:hover { color: var(--accent); border-color: var(--accent); }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 35px; }
+.hero-actions { position: relative; z-index: 5; display: flex; flex-wrap: wrap; gap: 12px; margin-top: 35px; }
+.hero-copy { position: relative; z-index: 2; min-width: 0; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 50px; padding: 0 20px; border-radius: 14px; font-size: 14px; font-weight: 720; transition: border-color .25s, background .25s, transform .25s; }
 .button span { font-size: 16px; }
 .button-primary { background: var(--accent); color: #160d21; box-shadow: 0 12px 40px rgba(175, 124, 255, .25); }
 .button-primary:hover { transform: translateY(-2px); background: #d5bcff; }
 .button-ghost { border: 1px solid var(--line); background: var(--surface); backdrop-filter: blur(10px); }
 .button-ghost:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+.contact-menu { position: relative; z-index: 40; }
+.contact-menu-trigger { cursor: pointer; }
+.contact-popover { position: absolute; z-index: 45; top: calc(100% + 10px); left: 0; width: 224px; padding: 8px; border: 1px solid var(--line-strong); border-radius: 16px; background: rgba(18,12,27,.96); box-shadow: 0 24px 70px rgba(0,0,0,.36); backdrop-filter: blur(22px) saturate(145%); opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-8px) scale(.98); transform-origin: top left; transition: opacity .2s ease, visibility .2s ease, transform .2s ease; }
+.contact-popover::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }
+[data-theme="light"] .contact-popover { background: rgba(252,249,255,.97); box-shadow: 0 24px 70px rgba(71,48,96,.17); }
+.contact-menu:hover .contact-popover, .contact-menu:focus-within .contact-popover, .contact-menu.is-open .contact-popover { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0) scale(1); }
+.contact-option { width: 100%; min-height: 44px; display: grid; grid-template-columns: 28px 1fr auto; align-items: center; gap: 9px; padding: 0 10px; border: 0; border-radius: 11px; background: transparent; color: var(--text); text-align: left; font-size: 13px; cursor: pointer; transition: background .18s ease, color .18s ease; }
+.contact-option:hover, .contact-option:focus-visible { outline: 0; background: rgba(197,163,255,.13); color: var(--heading); }
+.contact-option > span:last-child { color: var(--accent); }
+.contact-option-icon { width: 26px; height: 26px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 8px; color: var(--accent); font: 700 11px/1 ui-monospace, monospace; }
+.contact-wechat-option { position: relative; }
+.contact-qr-preview { position: absolute; z-index: 48; bottom: 0; left: calc(100% + 14px); width: 220px; padding: 10px; border: 1px solid var(--line-strong); border-radius: 18px; background: #fff; box-shadow: 0 24px 70px rgba(0,0,0,.32); opacity: 0; visibility: hidden; pointer-events: none; transform: translate(8px,0) scale(.97); transform-origin: left bottom; transition: opacity .2s ease, visibility .2s ease, transform .2s ease; }
+.contact-qr-preview::before { content: ""; position: absolute; top: 0; bottom: 0; left: -15px; width: 15px; }
+.contact-qr-preview img { width: 100%; height: auto; display: block; border-radius: 11px; }
+.contact-wechat-option:hover .contact-qr-preview, .contact-wechat-option:focus-within .contact-qr-preview, .contact-wechat-option.qr-open .contact-qr-preview { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(0,0) scale(1); }
 .hero-meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; max-width: 710px; margin-top: 32px; color: var(--text-soft); font: 500 10px/1.35 ui-monospace, monospace; }
 .live-item { min-width: 0; display: flex; align-items: center; gap: 8px; padding: 10px 11px; border: 1px solid var(--line); border-radius: 10px; background: rgba(20,14,30,.44); backdrop-filter: blur(10px); }
 [data-theme="light"] .live-item { background: rgba(255,255,255,.48); }
@@ -110,7 +126,7 @@ button { color: inherit; font: inherit; }
 .live-item strong { min-width: 0; overflow: hidden; color: var(--text); font-weight: 620; text-overflow: ellipsis; white-space: nowrap; }
 .pulse-dot { display: inline-block; width: 7px; height: 7px; margin-right: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 rgba(197, 163, 255, .48); animation: pulse 2.4s infinite; }
 
-.hero-athlete { position: relative; align-self: center; justify-self: end; width: min(440px, 36vw); height: clamp(540px, 70svh, 700px); isolation: isolate; }
+.hero-athlete { position: relative; z-index: 1; align-self: center; justify-self: end; width: min(440px, 36vw); height: clamp(540px, 70svh, 700px); isolation: isolate; }
 .hero-athlete::before { content: ""; position: absolute; z-index: -2; inset: 11% -9% 3% 6%; border: 1px solid rgba(197,163,255,.18); border-radius: 48% 52% 46% 54% / 56% 42% 58% 44%; background: radial-gradient(circle at 54% 42%, rgba(197,163,255,.26), rgba(127,94,188,.09) 42%, transparent 70%); filter: blur(.2px); }
 .hero-athlete::after { content: ""; position: absolute; z-index: -1; right: -4%; bottom: 5%; width: 90%; height: 25%; border-bottom: 1px solid rgba(197,163,255,.28); border-radius: 50%; background: radial-gradient(ellipse at center, rgba(145,104,196,.18), transparent 67%); transform: rotate(-5deg); }
 .hero-athlete img { position: absolute; right: 0; bottom: 0; width: auto; height: 100%; display: block; -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 97%, transparent 100%); mask-image: linear-gradient(to bottom, #000 0, #000 97%, transparent 100%); filter: drop-shadow(0 28px 34px rgba(0,0,0,.34)) drop-shadow(0 0 30px rgba(166,120,230,.10)); }
@@ -336,6 +352,9 @@ button { color: inherit; font: inherit; }
   .hero-meta { grid-template-columns: 1fr 1fr; gap: 7px; }
   .live-item { padding: 9px; font-size: 9px; }
   .hero-athlete { width: min(360px, 88vw); height: 500px; }
+  .contact-popover { right: 0; left: auto; width: min(290px, calc(100vw - 30px)); transform-origin: top right; }
+  .contact-qr-preview { position: relative; top: auto; right: auto; bottom: auto; left: auto; width: 100%; max-height: 0; margin: 0; padding: 0; overflow: hidden; border-width: 0; border-radius: 12px; box-shadow: none; opacity: 0; transform: none; transition: max-height .24s ease, margin .24s ease, padding .24s ease, opacity .2s ease; }
+  .contact-wechat-option:hover .contact-qr-preview, .contact-wechat-option:focus-within .contact-qr-preview, .contact-wechat-option.qr-open .contact-qr-preview { max-height: 300px; margin-top: 6px; padding: 8px; border-width: 1px; opacity: 1; transform: none; }
   .section, .profile-section { padding-block: 88px; }
   .section-heading { margin-bottom: 38px; }
   .publication-grid, .project-grid { grid-template-columns: 1fr; }

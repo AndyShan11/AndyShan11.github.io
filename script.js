@@ -242,6 +242,46 @@
     if (!inside) wechatDialog.close();
   });
 
+  const contactMenu = document.querySelector('.contact-menu');
+  const contactMenuTrigger = document.querySelector('.contact-menu-trigger');
+  const contactWechatOption = document.querySelector('.contact-wechat-option');
+  const contactWechatTrigger = document.querySelector('.contact-wechat-trigger');
+
+  function setContactMenuOpen(open) {
+    contactMenu?.classList.toggle('is-open', open);
+    contactMenuTrigger?.setAttribute('aria-expanded', String(open));
+    if (!open) {
+      contactWechatOption?.classList.remove('qr-open');
+      contactWechatTrigger?.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  contactMenuTrigger?.addEventListener('click', event => {
+    event.stopPropagation();
+    setContactMenuOpen(!contactMenu.classList.contains('is-open'));
+  });
+  contactWechatTrigger?.addEventListener('click', event => {
+    event.stopPropagation();
+    const open = !contactWechatOption.classList.contains('qr-open');
+    contactWechatOption.classList.toggle('qr-open', open);
+    contactWechatTrigger.setAttribute('aria-expanded', String(open));
+  });
+  contactMenu?.addEventListener('pointerenter', () => {
+    if (matchMedia('(hover: hover) and (pointer: fine)').matches) setContactMenuOpen(true);
+  });
+  contactMenu?.addEventListener('pointerleave', () => {
+    if (matchMedia('(hover: hover) and (pointer: fine)').matches) setContactMenuOpen(false);
+  });
+  document.addEventListener('click', event => {
+    if (!contactMenu?.contains(event.target)) setContactMenuOpen(false);
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      setContactMenuOpen(false);
+      contactMenuTrigger?.focus();
+    }
+  });
+
   if (!reducedMotion) {
     window.addEventListener('pointermove', event => {
       root.style.setProperty('--pointer-x', `${event.clientX}px`);
