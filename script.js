@@ -14,11 +14,11 @@
   const copy = {
     en: {
       navResearch: 'Research', navProjects: 'Projects', navProfile: 'Education',
-      heroEyebrow: 'Mathematics × Trustworthy AI',
+      heroEyebrow: 'Mathematics × Artificial Intelligence',
       heroTitle: 'I build AI systems that <span class="gradient-text">test before they trust.</span>',
-      heroLede: 'I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research connects trustworthy machine learning, AI agents, causal decision-making, neural algorithmic reasoning, and knowledge graphs. I am grateful to my undergraduate mentors, <a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">Prof. Da Zhou</a> and <a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">Prof. Ye Luo</a>, for their guidance.',
+      heroLede: 'I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research connects machine learning, AI agents, causal decision-making, graph reasoning, and mathematical modeling. I am grateful to my undergraduate mentors, <a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">Prof. Da Zhou</a> and <a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">Prof. Ye Luo</a>, for their guidance.',
       exploreResearch: 'Explore research', getInTouch: 'Get in touch',
-      heroDirectionOne: 'Trustworthy Machine Learning', heroDirectionTwo: 'AI Agents & Decision-Making', heroDirectionThree: 'Causal & Graph Reasoning',
+      heroDirectionOne: 'Machine Learning', heroDirectionTwo: 'AI Agents & Decision-Making', heroDirectionThree: 'Causal & Graph Reasoning', heroDirectionFour: 'Mathematical Modeling',
       localTime: 'Beijing time', lastUpdated: 'Updated', pageViews: 'Views', visitorIp: 'IP', locationHongKong: 'Hong Kong, China',
       selectedManuscripts: 'Selected manuscripts', researchTitle: 'Research that questions its assumptions.',
       researchIntro: 'Across causal learning, agents, and graphs, I design controls that reveal when external knowledge helps—and when a model should refuse it.',
@@ -59,7 +59,7 @@
       locsourceType: '03 / Spatial AI', locsourceDesc: 'Conservative, auditable transcript-ownership proposals for Xenium post-segmentation analysis.',
       booleanType: '02 / Discrete structure', booleanDesc: 'Walsh-spectral affine approximation, derivative-guided affine covers, and feedforward sequence recovery.',
       memoryType: '01 / Research agents', memoryDesc: 'Bounded, claim-relevant memory views and fail-closed evidence auditing for research agents.',
-      repoReport: 'Repository & report ↗', openRepository: 'Open repository ↗', educationRecognition: 'Education & recognition', educationLabel: 'Education', recognitionLabel: 'Recognition',
+      repoReport: 'Repository & report ↗', openRepository: 'Open repository ↗', educationRecognition: 'Education & honors', educationLabel: 'Education', recognitionLabel: 'Honors', educationHeading: 'Education', honorsHeading: 'Honors', educationYears: '2023—2027 (Expected)',
       xmu: 'Xiamen University', educationDegree: 'B.S. in Mathematics and Applied Mathematics<br>School of Mathematical Sciences',
       honorOne: '<b>Fujian First Prize</b><br>National Undergraduate Mathematical Modeling Contest · Team Leader',
       honorTwo: '<b>Fujian Third Prize</b><br>National Undergraduate Mathematical Modeling Contest · Team Leader',
@@ -73,11 +73,11 @@
     },
     zh: {
       navResearch: '研究', navProjects: '项目', navProfile: '教育',
-      heroEyebrow: '数学 × 可信人工智能',
+      heroEyebrow: '数学 × 人工智能',
       heroTitle: '我构建<span class="gradient-text">先验证、再信任的人工智能系统。</span>',
-      heroLede: '我是<strong>单夕航（Xihang Shan）</strong>，厦门大学数学与应用数学专业本科生。我的研究涉及可信机器学习、智能体、因果决策、神经算法推理与知识图谱。感谢本科导师<a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">周达教授</a>与<a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">罗晔副教授</a>的指导。',
+      heroLede: '我是<strong>单夕航（Xihang Shan）</strong>，厦门大学数学与应用数学专业本科生。我的研究涉及机器学习、智能体、因果决策、图推理与数学建模。感谢本科导师<a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">周达教授</a>与<a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">罗晔副教授</a>的指导。',
       exploreResearch: '查看研究', getInTouch: '联系我',
-      heroDirectionOne: '可信机器学习', heroDirectionTwo: 'AI 智能体与决策', heroDirectionThree: '因果与图推理',
+      heroDirectionOne: '机器学习', heroDirectionTwo: 'AI 智能体与决策', heroDirectionThree: '因果与图推理', heroDirectionFour: '数学建模',
       localTime: '北京时间', lastUpdated: '最后更新', pageViews: '浏览量', visitorIp: 'IP', locationHongKong: '中国香港',
       selectedManuscripts: '代表性论文', researchTitle: '让模型先检验，再相信。',
       researchIntro: '围绕因果学习、智能体与图推理，我研究如何判断外部知识何时有效，以及模型何时应当拒绝使用它。',
@@ -118,7 +118,7 @@
       locsourceType: '03 / 空间组学 AI', locsourceDesc: '面向 Xenium 后分割分析的保守、可审计转录本归属提案。',
       booleanType: '02 / 离散结构', booleanDesc: 'Walsh 谱仿射逼近、导数引导的仿射覆盖与前馈序列恢复。',
       memoryType: '01 / 研究智能体', memoryDesc: '面向研究智能体的有界、主张相关记忆视图，以及失败关闭式证据审计。',
-      repoReport: '代码与报告 ↗', openRepository: '查看代码仓库 ↗', educationRecognition: '教育经历与荣誉', educationLabel: '教育经历', recognitionLabel: '荣誉',
+      repoReport: '代码与报告 ↗', openRepository: '查看代码仓库 ↗', educationRecognition: '教育经历与荣誉', educationLabel: '教育经历', recognitionLabel: '荣誉', educationHeading: '教育经历', honorsHeading: '荣誉', educationYears: '2023—2027（预计）',
       xmu: '厦门大学', educationDegree: '数学与应用数学 理学学士<br>数学科学学院',
       honorOne: '<b>福建省一等奖</b><br>全国大学生数学建模竞赛 · 队长',
       honorTwo: '<b>福建省三等奖</b><br>全国大学生数学建模竞赛 · 队长',
@@ -324,9 +324,6 @@
   });
 
   const methodVideos = [...document.querySelectorAll('.publication-animation')];
-  const playMethodVideo = video => video.play().catch(() => {
-    video.closest('.publication-figure')?.classList.add('video-unavailable');
-  });
   methodVideos.forEach(video => {
     video.addEventListener('error', () => video.closest('.publication-figure')?.classList.add('video-unavailable'));
   });
@@ -335,26 +332,53 @@
       video.pause();
       video.removeAttribute('autoplay');
     });
-  } else if ('IntersectionObserver' in window) {
-    const videoObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const video = entry.target;
-        if (entry.isIntersecting && document.visibilityState === 'visible') playMethodVideo(video);
-        else video.pause();
-      });
-    }, { threshold: 0.08, rootMargin: '180px 0px' });
-    methodVideos.forEach(video => {
-      video.pause();
-      videoObserver.observe(video);
-    });
-    document.addEventListener('visibilitychange', () => {
-      methodVideos.forEach(video => {
-        if (document.hidden) video.pause();
-        else if (video.getBoundingClientRect().top < innerHeight && video.getBoundingClientRect().bottom > 0) playMethodVideo(video);
-      });
-    });
   } else {
-    methodVideos.forEach(playMethodVideo);
+    let syncFrame = 0;
+    let cycleStartedAt = performance.now();
+    const motionDuration = 8000;
+    const holdDuration = 1000;
+    const cycleDuration = motionDuration + holdDuration;
+    let lastPlayingState = true;
+
+    const syncVideos = now => {
+      if (document.hidden) return;
+      const elapsed = (now - cycleStartedAt) % cycleDuration;
+      const playing = elapsed < motionDuration;
+      const targetTime = elapsed / 1000;
+      if (playing !== lastPlayingState) {
+        methodVideos.forEach(video => {
+          video.pause();
+          if (video.readyState >= 1) video.currentTime = playing ? 0 : Math.max(0, video.duration - .05);
+        });
+        lastPlayingState = playing;
+      }
+      methodVideos.forEach(video => {
+        if (playing && video.readyState >= 1) {
+          const boundedTarget = Math.max(0, Math.min(targetTime, video.duration - .035));
+          if (!video.seeking && Math.abs(video.currentTime - boundedTarget) > .09) video.currentTime = boundedTarget;
+        }
+        if (playing) {
+          if (video.paused) video.play().catch(() => {});
+        } else if (!video.paused) {
+          video.pause();
+        }
+      });
+      syncFrame = requestAnimationFrame(syncVideos);
+    };
+
+    methodVideos.forEach(video => video.load());
+    syncFrame = requestAnimationFrame(syncVideos);
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        cancelAnimationFrame(syncFrame);
+        methodVideos.forEach(video => video.pause());
+      } else {
+        cycleStartedAt = performance.now();
+        lastPlayingState = true;
+        syncFrame = requestAnimationFrame(syncVideos);
+      }
+    });
   }
 
   if (!reducedMotion && matchMedia('(pointer: fine)').matches) {
@@ -380,73 +404,4 @@
   }, { rootMargin: '-35% 0px -58%', threshold: 0 });
   sections.forEach(section => sectionObserver.observe(section));
 
-  const canvas = document.getElementById('network-canvas');
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  let frame;
-  let pointer = { x: -9999, y: -9999 };
-
-  function resizeCanvas() {
-    const rect = canvas.getBoundingClientRect();
-    const ratio = Math.min(devicePixelRatio, 2);
-    canvas.width = rect.width * ratio;
-    canvas.height = rect.height * ratio;
-    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-    const count = Math.min(72, Math.max(34, Math.floor(rect.width / 19)));
-    particles = Array.from({ length: count }, () => ({
-      x: Math.random() * rect.width,
-      y: Math.random() * rect.height * .86,
-      vx: (Math.random() - .5) * .16,
-      vy: (Math.random() - .5) * .16,
-      r: Math.random() * 1.15 + .45
-    }));
-  }
-
-  function drawNetwork() {
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
-    ctx.clearRect(0, 0, width, height);
-    const light = root.dataset.theme === 'light';
-    particles.forEach((particle, index) => {
-      particle.x += particle.vx;
-      particle.y += particle.vy;
-      if (particle.x < 0 || particle.x > width) particle.vx *= -1;
-      if (particle.y < 0 || particle.y > height * .9) particle.vy *= -1;
-      const dxPointer = pointer.x - particle.x;
-      const dyPointer = pointer.y - particle.y;
-      const pointerDistance = Math.hypot(dxPointer, dyPointer);
-      if (pointerDistance < 140) {
-        particle.x -= dxPointer * .0007;
-        particle.y -= dyPointer * .0007;
-      }
-      ctx.beginPath();
-      ctx.arc(particle.x, particle.y, particle.r, 0, Math.PI * 2);
-      ctx.fillStyle = light ? 'rgba(118,80,173,.36)' : 'rgba(197,163,255,.44)';
-      ctx.fill();
-      for (let j = index + 1; j < particles.length; j++) {
-        const other = particles[j];
-        const distance = Math.hypot(particle.x - other.x, particle.y - other.y);
-        if (distance < 118) {
-          ctx.beginPath();
-          ctx.moveTo(particle.x, particle.y);
-          ctx.lineTo(other.x, other.y);
-          ctx.strokeStyle = light
-            ? `rgba(118,80,173,${(1 - distance / 118) * .13})`
-            : `rgba(197,163,255,${(1 - distance / 118) * .16})`;
-          ctx.lineWidth = .6;
-          ctx.stroke();
-        }
-      }
-    });
-    frame = requestAnimationFrame(drawNetwork);
-  }
-
-  canvas.addEventListener('pointermove', event => {
-    const rect = canvas.getBoundingClientRect();
-    pointer = { x: event.clientX - rect.left, y: event.clientY - rect.top };
-  });
-  canvas.addEventListener('pointerleave', () => { pointer = { x: -9999, y: -9999 }; });
-  resizeCanvas();
-  if (!reducedMotion) drawNetwork(); else drawNetwork(), cancelAnimationFrame(frame);
-  window.addEventListener('resize', resizeCanvas, { passive: true });
 })();

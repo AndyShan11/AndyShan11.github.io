@@ -318,12 +318,12 @@ def cdv(t: float) -> Image.Image:
         pred_now = pred
         d.text((572, y + 17), "probe prediction", font=F_MICRO, fill=MUTED)
         bar(d, (572, y + 48, 716, y + 62), pred_now * p_world, color)
-        d.text((730, y + 46), f"{pred_now:.2f}", font=F_SMALL_B, fill=NAVY)
+        d.text((739, y + 46), f"{pred_now:.2f}", font=F_SMALL_B, fill=NAVY, anchor="ra")
         start_w = [.34, .51, .15][i]
         weight = mix(start_w, target_w, p_update)
-        d.text((780, y + 16), "trust", font=F_MICRO, fill=MUTED, anchor="ma")
-        d.text((780, y + 50), f"{weight:.2f}", font=F_NUM, fill=color, anchor="mm")
-        d.text((780, y + 78), "posterior", font=F_MICRO, fill=MUTED, anchor="ma")
+        d.text((796, y + 16), "trust", font=F_MICRO, fill=MUTED, anchor="ma")
+        d.text((796, y + 50), f"{weight:.2f}", font=F_NUM, fill=color, anchor="mm")
+        d.text((796, y + 78), "posterior", font=F_MICRO, fill=MUTED, anchor="ma")
     y_obs = 639
     d.text((366, y_obs), "DIAGNOSTIC OBSERVATION", font=F_MICRO, fill=BLUE)
     rounded(d, (555, y_obs - 8, 844, y_obs + 31), PALE_BLUE if p_probe > .7 else WHITE, BLUE, 10, 2)
