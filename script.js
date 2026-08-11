@@ -14,7 +14,7 @@
   const copy = {
     en: {
       navResearch: 'Research', navProjects: 'Projects', navProfile: 'Education',
-      heroEyebrow: 'Mathematics × Artificial Intelligence',
+      heroEyebrow: 'Xihang Shan · 单夕航',
       heroTitle: 'I am committed to building AI systems that <span class="gradient-text">test before they trust.</span>',
       heroLede: 'I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research connects machine learning, AI agents, causal decision-making, graph reasoning, and mathematical modeling. I am grateful to my undergraduate mentors, <a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">Prof. Da Zhou</a> and <a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">Prof. Ye Luo</a>, for their guidance.',
       exploreResearch: 'Explore research', getInTouch: 'Get in touch',
@@ -78,7 +78,7 @@
     },
     zh: {
       navResearch: '研究', navProjects: '项目', navProfile: '教育',
-      heroEyebrow: '数学 × 人工智能',
+      heroEyebrow: '单夕航 · Xihang Shan',
       heroTitle: '我致力于构建<span class="gradient-text">先验证、再信任的人工智能系统。</span>',
       heroLede: '我是<strong>单夕航（Xihang Shan）</strong>，厦门大学数学与应用数学专业本科生。我的研究涉及机器学习、智能体、因果决策、图推理与数学建模。感谢本科导师<a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">周达教授</a>与<a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">罗晔副教授</a>的指导。',
       exploreResearch: '查看研究', getInTouch: '联系我',
