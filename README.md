@@ -1,4 +1,4 @@
-# ShanXihang — Personal Academic Homepage
+# Xihang Shan — Personal Academic Homepage
 
 Source for [andyshan11.github.io](https://andyshan11.github.io/).
 

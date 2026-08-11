@@ -20,6 +20,10 @@
       exploreResearch: 'Explore research', getInTouch: 'Get in touch',
       heroDirectionOne: 'Machine Learning', heroDirectionTwo: 'AI Agents & Decision-Making', heroDirectionThree: 'Causal & Graph Reasoning', heroDirectionFour: 'Mathematical Modeling',
       localTime: 'Beijing time', lastUpdated: 'Updated', pageViews: 'Views', visitorIp: 'IP', locationHongKong: 'Hong Kong, China',
+      newsLabel: 'News', newsIntro: 'Recent updates',
+      newsOne: 'Personal homepage launched.',
+      newsTwo: 'Summer research collaboration at HKUST with Prof. Can Yang.',
+      newsThree: 'Three manuscripts submitted to AAAI 2027.',
       selectedManuscripts: 'Selected manuscripts', researchTitle: 'Research that questions its assumptions.',
       researchIntro: 'Across causal learning, agents, and graphs, I design controls that reveal when external knowledge helps—and when a model should refuse it.',
       filterAll: 'All', filterCausal: 'Causal AI', filterAgents: 'Agents', filterGraphs: 'Graphs & reasoning',
@@ -67,6 +71,7 @@
       hobbies: 'Beyond research', hobbiesTitle: 'Things I enjoy away from the screen.', basketball: 'Basketball', basketballNote: 'Long-time NBA fan · Always happy to talk basketball', billiards: 'Billiards', piano: 'Piano', bridge: 'Bridge', touchRugby: 'Touch Rugby',
       contact: 'Contact', contactTitle: 'Open to conversation<br>and collaboration.', emailMe: 'Email me',
       wechat: 'WeChat', wechatTitle: 'Scan to connect', wechatNote: 'Add a short note with your name and research interests.',
+      siteInfoLabel: 'Site information', siteInfoIntro: 'Quiet details, kept at the end.',
       footerLine: 'Built for clarity, motion, and evidence.', backTop: 'Back to top ↑',
       orbitCausal: 'Causal AI', orbitAgents: 'Agents', orbitGraphs: 'Graphs',
       signalPrior: 'Prior', signalCalibrate: 'calibrate', signalState: 'State', signalRecompute: 'recompute', signalClaim: 'Claim', signalControl: 'control'
@@ -79,6 +84,10 @@
       exploreResearch: '查看研究', getInTouch: '联系我',
       heroDirectionOne: '机器学习', heroDirectionTwo: 'AI 智能体与决策', heroDirectionThree: '因果与图推理', heroDirectionFour: '数学建模',
       localTime: '北京时间', lastUpdated: '最后更新', pageViews: '浏览量', visitorIp: 'IP', locationHongKong: '中国香港',
+      newsLabel: '最新动态', newsIntro: '近期更新',
+      newsOne: '个人主页上线。',
+      newsTwo: '在香港科技大学与杨灿教授开展暑期研究合作。',
+      newsThree: '三篇稿件投稿 AAAI 2027。',
       selectedManuscripts: '代表性论文', researchTitle: '让模型先检验，再相信。',
       researchIntro: '围绕因果学习、智能体与图推理，我研究如何判断外部知识何时有效，以及模型何时应当拒绝使用它。',
       filterAll: '全部', filterCausal: '因果 AI', filterAgents: '智能体', filterGraphs: '图与推理',
@@ -126,6 +135,7 @@
       hobbies: '个人爱好', hobbiesTitle: '研究之外，也认真享受生活。', basketball: '篮球', basketballNote: 'NBA 资深球迷 · 欢迎一起聊球', billiards: '台球', piano: '钢琴', bridge: '桥牌', touchRugby: '触式橄榄球',
       contact: '联系', contactTitle: '欢迎交流与合作。', emailMe: '发送邮件',
       wechat: '微信', wechatTitle: '扫码添加微信', wechatNote: '添加时请简单备注姓名与研究方向。',
+      siteInfoLabel: '网站信息', siteInfoIntro: '次要信息统一放在页尾。',
       footerLine: '为清晰、证据与可审查性而构建。', backTop: '返回顶部 ↑',
       orbitCausal: '因果 AI', orbitAgents: '智能体', orbitGraphs: '图推理',
       signalPrior: '先验', signalCalibrate: '校准', signalState: '状态', signalRecompute: '重算', signalClaim: '主张', signalControl: '控制'
@@ -171,7 +181,7 @@
     cvLabel.textContent = language === 'zh' ? '简历' : 'CV';
     navToggle.setAttribute('aria-label', navigationLabel(navToggle.getAttribute('aria-expanded') === 'true'));
     document.querySelector('.skip-link').textContent = language === 'zh' ? '跳到正文' : 'Skip to content';
-    document.title = language === 'zh' ? 'ShanXihang — 可信与结构化人工智能' : 'ShanXihang — Trustworthy & Structured AI';
+    document.title = language === 'zh' ? '单夕航（Xihang Shan）— 可信与结构化人工智能' : 'Xihang Shan (单夕航) — Trustworthy & Structured AI';
     localStorage.setItem('xihang-language', language);
     refreshTimes();
   }
@@ -324,6 +334,7 @@
   });
 
   const methodVideos = [...document.querySelectorAll('.publication-animation')];
+  const methodFigures = [...document.querySelectorAll('.publication-figure')];
   methodVideos.forEach(video => {
     video.addEventListener('error', () => video.closest('.publication-figure')?.classList.add('video-unavailable'));
   });
@@ -334,15 +345,21 @@
     });
   } else {
     let syncFrame = 0;
-    let cycleStartedAt = performance.now();
+    let cycleStartedAt = 0;
+    let hasStarted = false;
+    let startTimer = 0;
     const motionDuration = 4000;
     const holdDuration = 1500;
     const playbackRate = 2;
     const cycleDuration = motionDuration + holdDuration;
     let lastPlayingState = true;
 
+    const setAnimationVisible = visible => {
+      methodFigures.forEach(figure => figure.classList.toggle('is-animating', visible && !figure.classList.contains('video-unavailable')));
+    };
+
     const syncVideos = now => {
-      if (document.hidden) return;
+      if (document.hidden || !hasStarted) return;
       const elapsed = (now - cycleStartedAt) % cycleDuration;
       const playing = elapsed < motionDuration;
       const targetTime = elapsed / 1000 * playbackRate;
@@ -367,18 +384,42 @@
       syncFrame = requestAnimationFrame(syncVideos);
     };
 
+    const startAnimation = () => {
+      if (hasStarted || document.hidden) return;
+      hasStarted = true;
+      cycleStartedAt = performance.now();
+      lastPlayingState = true;
+      setAnimationVisible(true);
+      syncFrame = requestAnimationFrame(syncVideos);
+    };
+
     methodVideos.forEach(video => {
       video.defaultPlaybackRate = playbackRate;
       video.load();
       video.playbackRate = playbackRate;
+      video.pause();
     });
-    syncFrame = requestAnimationFrame(syncVideos);
+
+    const researchSection = document.querySelector('.research-section');
+    if ('IntersectionObserver' in window && researchSection) {
+      const animationObserver = new IntersectionObserver(entries => {
+        if (entries.some(entry => entry.isIntersecting)) {
+          clearTimeout(startTimer);
+          startTimer = window.setTimeout(startAnimation, 900);
+          animationObserver.disconnect();
+        }
+      }, { threshold: 0.08, rootMargin: '80px 0px' });
+      animationObserver.observe(researchSection);
+    } else {
+      startTimer = window.setTimeout(startAnimation, 900);
+    }
 
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) {
+        clearTimeout(startTimer);
         cancelAnimationFrame(syncFrame);
         methodVideos.forEach(video => video.pause());
-      } else {
+      } else if (hasStarted) {
         cycleStartedAt = performance.now();
         lastPlayingState = true;
         syncFrame = requestAnimationFrame(syncVideos);
