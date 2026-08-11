@@ -335,8 +335,9 @@
   } else {
     let syncFrame = 0;
     let cycleStartedAt = performance.now();
-    const motionDuration = 8000;
-    const holdDuration = 1000;
+    const motionDuration = 4000;
+    const holdDuration = 1500;
+    const playbackRate = 2;
     const cycleDuration = motionDuration + holdDuration;
     let lastPlayingState = true;
 
@@ -344,7 +345,7 @@
       if (document.hidden) return;
       const elapsed = (now - cycleStartedAt) % cycleDuration;
       const playing = elapsed < motionDuration;
-      const targetTime = elapsed / 1000;
+      const targetTime = elapsed / 1000 * playbackRate;
       if (playing !== lastPlayingState) {
         methodVideos.forEach(video => {
           video.pause();
@@ -366,7 +367,11 @@
       syncFrame = requestAnimationFrame(syncVideos);
     };
 
-    methodVideos.forEach(video => video.load());
+    methodVideos.forEach(video => {
+      video.defaultPlaybackRate = playbackRate;
+      video.load();
+      video.playbackRate = playbackRate;
+    });
     syncFrame = requestAnimationFrame(syncVideos);
 
     document.addEventListener('visibilitychange', () => {
