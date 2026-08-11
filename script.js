@@ -13,7 +13,7 @@
 
   const copy = {
     en: {
-      navResearch: 'Research', navProjects: 'Projects', navProfile: 'Profile',
+      navResearch: 'Research', navProjects: 'Projects', navProfile: 'Education',
       heroEyebrow: 'Mathematics × Trustworthy AI',
       heroTitle: 'I build AI systems that <span class="gradient-text">test before they trust.</span>',
       heroLede: 'I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research connects trustworthy machine learning, AI agents, causal decision-making, neural algorithmic reasoning, and knowledge graphs. I am grateful to my undergraduate mentors, <a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">Prof. Da Zhou</a> and <a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">Prof. Ye Luo</a>, for their guidance.',
@@ -58,7 +58,7 @@
       locsourceType: '03 / Spatial AI', locsourceDesc: 'Conservative, auditable transcript-ownership proposals for Xenium post-segmentation analysis.',
       booleanType: '02 / Discrete structure', booleanDesc: 'Walsh-spectral affine approximation, derivative-guided affine covers, and feedforward sequence recovery.',
       memoryType: '01 / Research agents', memoryDesc: 'Bounded, claim-relevant memory views and fail-closed evidence auditing for research agents.',
-      repoReport: 'Repository & report ↗', openRepository: 'Open repository ↗', educationRecognition: 'Education & recognition',
+      repoReport: 'Repository & report ↗', openRepository: 'Open repository ↗', educationRecognition: 'Education & recognition', educationLabel: 'Education', recognitionLabel: 'Recognition',
       xmu: 'Xiamen University', educationDegree: 'B.S. in Mathematics and Applied Mathematics<br>School of Mathematical Sciences',
       honorOne: '<b>Fujian First Prize</b><br>National Undergraduate Mathematical Modeling Contest · Team Leader',
       honorTwo: '<b>Fujian Third Prize</b><br>National Undergraduate Mathematical Modeling Contest · Team Leader',
@@ -70,7 +70,7 @@
       signalPrior: 'Prior', signalCalibrate: 'calibrate', signalState: 'State', signalRecompute: 'recompute', signalClaim: 'Claim', signalControl: 'control'
     },
     zh: {
-      navResearch: '研究', navProjects: '项目', navProfile: '简介',
+      navResearch: '研究', navProjects: '项目', navProfile: '教育',
       heroEyebrow: '数学 × 可信人工智能',
       heroTitle: '我构建<span class="gradient-text">先验证、再信任的人工智能系统。</span>',
       heroLede: '我是<strong>单夕航（Xihang Shan）</strong>，厦门大学数学与应用数学专业本科生。我的研究涉及可信机器学习、智能体、因果决策、神经算法推理与知识图谱。感谢本科导师<a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">周达教授</a>与<a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">罗晔副教授</a>的指导。',
@@ -115,7 +115,7 @@
       locsourceType: '03 / 空间组学 AI', locsourceDesc: '面向 Xenium 后分割分析的保守、可审计转录本归属提案。',
       booleanType: '02 / 离散结构', booleanDesc: 'Walsh 谱仿射逼近、导数引导的仿射覆盖与前馈序列恢复。',
       memoryType: '01 / 研究智能体', memoryDesc: '面向研究智能体的有界、主张相关记忆视图，以及失败关闭式证据审计。',
-      repoReport: '代码与报告 ↗', openRepository: '查看代码仓库 ↗', educationRecognition: '教育经历与荣誉',
+      repoReport: '代码与报告 ↗', openRepository: '查看代码仓库 ↗', educationRecognition: '教育经历与荣誉', educationLabel: '教育经历', recognitionLabel: '荣誉',
       xmu: '厦门大学', educationDegree: '数学与应用数学 理学学士<br>数学科学学院',
       honorOne: '<b>福建省一等奖</b><br>全国大学生数学建模竞赛 · 队长',
       honorTwo: '<b>福建省三等奖</b><br>全国大学生数学建模竞赛 · 队长',
