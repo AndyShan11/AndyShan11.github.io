@@ -16,7 +16,7 @@
       navResearch: 'Research', navProjects: 'Projects', navProfile: 'Profile',
       heroEyebrow: 'Mathematics × Trustworthy AI',
       heroTitle: 'I build AI systems that <span class="gradient-text">test before they trust.</span>',
-      heroLede: 'I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research connects trustworthy machine learning, AI agents, causal decision-making, neural algorithmic reasoning, and knowledge graphs. I am grateful to my undergraduate mentors, <a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">Prof. Da Zhou</a> and <a class="mentor-link" href="https://scholar.xmu.edu.cn/Authors/Index?id=LuoYe" target="_blank" rel="noopener">Prof. Ye Luo</a>, for their guidance.',
+      heroLede: 'I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research connects trustworthy machine learning, AI agents, causal decision-making, neural algorithmic reasoning, and knowledge graphs. I am grateful to my undergraduate mentors, <a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">Prof. Da Zhou</a> and <a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">Prof. Ye Luo</a>, for their guidance.',
       exploreResearch: 'Explore research', getInTouch: 'Get in touch',
       localTime: 'Beijing time', lastUpdated: 'Updated', pageViews: 'Views', visitorIp: 'IP', locationHongKong: 'Hong Kong, China',
       selectedManuscripts: 'Selected manuscripts', researchTitle: 'Research that questions its assumptions.',
@@ -73,7 +73,7 @@
       navResearch: '研究', navProjects: '项目', navProfile: '简介',
       heroEyebrow: '数学 × 可信人工智能',
       heroTitle: '我构建<span class="gradient-text">先验证、再信任的人工智能系统。</span>',
-      heroLede: '我是<strong>单夕航（Xihang Shan）</strong>，厦门大学数学与应用数学专业本科生。我的研究涉及可信机器学习、智能体、因果决策、神经算法推理与知识图谱。感谢本科导师<a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">周达教授</a>和<a class="mentor-link" href="https://scholar.xmu.edu.cn/Authors/Index?id=LuoYe" target="_blank" rel="noopener">罗晔老师</a>的指导。',
+      heroLede: '我是<strong>单夕航（Xihang Shan）</strong>，厦门大学数学与应用数学专业本科生。我的研究涉及可信机器学习、智能体、因果决策、神经算法推理与知识图谱。感谢本科导师<a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">周达教授</a>与<a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">罗晔副教授</a>的指导。',
       exploreResearch: '查看研究', getInTouch: '联系我',
       localTime: '北京时间', lastUpdated: '最后更新', pageViews: '浏览量', visitorIp: 'IP', locationHongKong: '中国香港',
       selectedManuscripts: '代表性论文', researchTitle: '让模型先检验，再相信。',
@@ -167,7 +167,7 @@
     cvLabel.textContent = language === 'zh' ? '简历' : 'CV';
     navToggle.setAttribute('aria-label', navigationLabel(navToggle.getAttribute('aria-expanded') === 'true'));
     document.querySelector('.skip-link').textContent = language === 'zh' ? '跳到正文' : 'Skip to content';
-    document.title = language === 'zh' ? '单夕航 — 可信与结构化人工智能' : 'Xihang Shan — Trustworthy & Structured AI';
+    document.title = language === 'zh' ? 'ShanXihang — 可信与结构化人工智能' : 'ShanXihang — Trustworthy & Structured AI';
     localStorage.setItem('xihang-language', language);
     refreshTimes();
   }
