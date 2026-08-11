@@ -121,6 +121,12 @@ button { color: inherit; font: inherit; }
 .monogram { position: absolute; inset: 25%; display: grid; place-items: center; align-content: center; gap: 7px; border: 1px solid var(--line-strong); border-radius: 50%; background: radial-gradient(circle at 35% 25%, rgba(105,231,204,.23), var(--surface-solid) 68%); box-shadow: inset 0 0 50px rgba(105,231,204,.08), var(--shadow); }
 .monogram span { color: var(--heading); font: 750 clamp(14px, 1.8vw, 23px)/.9 ui-monospace, monospace; letter-spacing: .15em; transform: translateX(.075em); }
 .monogram span:nth-child(2) { color: var(--accent); }
+.hero-portrait { position: absolute; inset: 17%; z-index: 2; overflow: hidden; border: 1px solid rgba(255,255,255,.52); border-radius: 50%; background: #fff; box-shadow: 0 22px 70px rgba(0,0,0,.26), 0 0 0 10px rgba(105,231,204,.045); }
+.hero-portrait::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(16,42,67,.08), inset 0 -46px 60px rgba(8,25,36,.08); pointer-events: none; }
+.hero-portrait img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 34%; transform: scale(1.02); transform-origin: center 36%; }
+.portrait-motto { position: absolute; z-index: 5; left: 50%; bottom: 7%; width: 78%; display: flex; align-items: center; justify-content: space-around; gap: 8px; padding: 11px 14px; transform: translateX(-50%); border: 1px solid rgba(105,231,204,.3); border-radius: 999px; background: rgba(7,17,26,.88); box-shadow: 0 12px 36px rgba(0,0,0,.22); backdrop-filter: blur(14px); }
+.portrait-motto span { color: #eaf8f5; font: 750 11px/1 ui-monospace, monospace; letter-spacing: .11em; }
+.portrait-motto span:nth-child(2) { color: var(--accent); }
 .orbit-label { position: absolute; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--text-soft); font: 600 9px/1 ui-monospace, monospace; backdrop-filter: blur(10px); animation: spin-reverse 28s linear infinite; }
 .label-one { top: -12px; left: 42%; }
 .label-two { right: -18px; top: 52%; }
