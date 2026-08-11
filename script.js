@@ -15,7 +15,7 @@
     en: {
       navResearch: 'Research', navProjects: 'Projects', navProfile: 'Education',
       heroEyebrow: 'Mathematics × Artificial Intelligence',
-      heroTitle: 'I build AI systems that <span class="gradient-text">test before they trust.</span>',
+      heroTitle: 'I am committed to building AI systems that <span class="gradient-text">test before they trust.</span>',
       heroLede: 'I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research connects machine learning, AI agents, causal decision-making, graph reasoning, and mathematical modeling. I am grateful to my undergraduate mentors, <a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">Prof. Da Zhou</a> and <a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">Prof. Ye Luo</a>, for their guidance.',
       exploreResearch: 'Explore research', getInTouch: 'Get in touch',
       heroDirectionOne: 'Machine Learning', heroDirectionTwo: 'AI Agents & Decision-Making', heroDirectionThree: 'Causal & Graph Reasoning', heroDirectionFour: 'Mathematical Modeling',
