@@ -144,6 +144,13 @@ button { color: inherit; font: inherit; }
 .news-row { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 24px; align-items: baseline; min-height: 58px; padding: 17px 0; border-bottom: 1px solid var(--line); }
 .news-row time { color: var(--accent); font: 700 10px/1.4 ui-monospace, monospace; letter-spacing: .06em; text-transform: uppercase; }
 .news-row p { margin: 0; color: var(--text); font-size: 14px; }
+.news-row .mentor-link { color: var(--accent); border-bottom-color: var(--accent); font-weight: 700; }
+.news-row .mentor-link::after { content: ' ↗'; font-size: .78em; }
+.news-toggle { width: 100%; min-height: 50px; display: flex; align-items: center; justify-content: center; gap: 10px; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--text-soft); font: 700 10px/1 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; transition: color .2s, background .2s; }
+.news-toggle:hover { color: var(--accent); background: color-mix(in srgb, var(--accent) 5%, transparent); }
+.news-toggle-arrow { display: inline-block; color: var(--accent); font-size: 16px; transition: transform .25s ease; }
+.news-toggle[aria-expanded="true"] .news-toggle-arrow { transform: rotate(180deg); }
+.news-toggle[hidden], .news-row[hidden] { display: none; }
 
 .section { padding-block: 126px; }
 .section-tinted { position: relative; background: var(--bg-elevated); border-block: 1px solid var(--line); }

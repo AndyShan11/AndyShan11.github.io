@@ -10,6 +10,10 @@
   const cvLink = document.querySelector('.nav-cv');
   const cvLabel = document.querySelector('.cv-label');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const newsToggle = document.querySelector('.news-toggle');
+  const newsToggleLabel = document.querySelector('.news-toggle-label');
+  const newsRows = [...document.querySelectorAll('.news-row')];
+  const newsVisibleLimit = 4;
 
   const copy = {
     en: {
@@ -22,8 +26,13 @@
       localTime: 'Beijing time', lastUpdated: 'Updated', pageViews: 'Views', visitorIp: 'IP', locationHongKong: 'Hong Kong, China',
       newsLabel: 'News', newsIntro: 'Recent updates',
       newsOne: 'Personal homepage launched.',
-      newsTwo: 'Summer research collaboration at HKUST with <a class="mentor-link" href="https://sites.google.com/site/eeyangc/" target="_blank" rel="noopener">Prof. Can Yang</a>.',
-      newsThree: 'Three manuscripts submitted to AAAI 2027.',
+      newsTwo: 'Summer research collaboration at HKUST with <a class="mentor-link" href="https://sites.google.com/site/eeyangc/" target="_blank" rel="noopener" aria-label="Prof. Can Yang\'s homepage">Prof. Can Yang</a>.',
+      newsThree: 'Completed the NeurIPS 2026 rebuttal; post-rebuttal reviews: 4/4/5.',
+      newsFour: 'Three manuscripts submitted to AAAI 2027.',
+      newsFive: 'National-level undergraduate research program launched at Xiamen University.',
+      newsSix: 'Named Outstanding Student at the Cryptography & Mathematics Summer School.',
+      newsSeven: 'Began graph reasoning and neural algorithms research with <a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">Prof. Ye Luo</a>.',
+      newsShowMore: 'Show earlier updates', newsShowLess: 'Show fewer updates',
       selectedManuscripts: 'Selected manuscripts', researchTitle: 'Research that questions its assumptions.',
       researchIntro: 'Across causal learning, agents, and graphs, I design controls that reveal when external knowledge helps—and when a model should refuse it.',
       filterAll: 'All', filterCausal: 'Causal AI', filterAgents: 'Agents', filterGraphs: 'Graphs & reasoning',
@@ -86,8 +95,13 @@
       localTime: '北京时间', lastUpdated: '最后更新', pageViews: '浏览量', visitorIp: 'IP', locationHongKong: '中国香港',
       newsLabel: '最新动态', newsIntro: '近期更新',
       newsOne: '个人主页上线。',
-      newsTwo: '在香港科技大学与<a class="mentor-link" href="https://sites.google.com/site/eeyangc/" target="_blank" rel="noopener">杨灿教授</a>开展暑期研究合作。',
-      newsThree: '三篇稿件投稿 AAAI 2027。',
+      newsTwo: '在香港科技大学与<a class="mentor-link" href="https://sites.google.com/site/eeyangc/" target="_blank" rel="noopener" aria-label="杨灿教授主页">杨灿教授</a>开展暑期研究合作。',
+      newsThree: '完成 NeurIPS 2026 rebuttal；rebuttal 后评分为 4/4/5。',
+      newsFour: '三篇稿件投稿 AAAI 2027。',
+      newsFive: '厦门大学国家级大学生创新创业训练计划立项。',
+      newsSix: '获评密码与数学暑期学校优秀学员。',
+      newsSeven: '开始与<a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">罗晔副教授</a>开展图推理与神经算法研究。',
+      newsShowMore: '展开更早动态', newsShowLess: '收起更早动态',
       selectedManuscripts: '代表性论文', researchTitle: '让模型先检验，再相信。',
       researchIntro: '围绕因果学习、智能体与图推理，我研究如何判断外部知识何时有效，以及模型何时应当拒绝使用它。',
       filterAll: '全部', filterCausal: '因果 AI', filterAgents: '智能体', filterGraphs: '图与推理',
@@ -183,7 +197,27 @@
     document.querySelector('.skip-link').textContent = language === 'zh' ? '跳到正文' : 'Skip to content';
     document.title = language === 'zh' ? '单夕航（Xihang Shan）— 可信与结构化人工智能' : 'Xihang Shan (单夕航) — Trustworthy & Structured AI';
     localStorage.setItem('xihang-language', language);
+    updateNewsToggleLabel();
     refreshTimes();
+  }
+
+  function updateNewsToggleLabel() {
+    if (!newsToggle || !newsToggleLabel) return;
+    const expanded = newsToggle.getAttribute('aria-expanded') === 'true';
+    newsToggleLabel.textContent = copy[currentLanguage][expanded ? 'newsShowLess' : 'newsShowMore'];
+    newsToggle.setAttribute('aria-label', newsToggleLabel.textContent);
+  }
+
+  const extraNewsRows = newsRows.slice(newsVisibleLimit);
+  if (extraNewsRows.length && newsToggle) {
+    extraNewsRows.forEach(row => { row.hidden = true; });
+    newsToggle.hidden = false;
+    newsToggle.addEventListener('click', () => {
+      const expanded = newsToggle.getAttribute('aria-expanded') !== 'true';
+      newsToggle.setAttribute('aria-expanded', String(expanded));
+      extraNewsRows.forEach(row => { row.hidden = !expanded; });
+      updateNewsToggleLabel();
+    });
   }
 
   const savedTheme = localStorage.getItem('xihang-theme');
