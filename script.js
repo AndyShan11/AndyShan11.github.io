@@ -65,6 +65,7 @@
       honorThree: '<b>Outstanding Student</b><br>Cryptography & Mathematics Summer School · Top 10 of 60',
       hobbies: 'Beyond research', hobbiesTitle: 'Things I enjoy away from the screen.', basketball: 'Basketball', basketballNote: 'Long-time NBA fan', billiards: 'Billiards', piano: 'Piano', bridge: 'Bridge',
       contact: 'Contact', contactTitle: 'Open to conversation<br>and collaboration.', emailMe: 'Email me',
+      wechat: 'WeChat', wechatTitle: 'Scan to connect', wechatNote: 'Add a short note with your name and research interests.',
       footerLine: 'Built for clarity, motion, and evidence.', backTop: 'Back to top ↑',
       orbitCausal: 'Causal AI', orbitAgents: 'Agents', orbitGraphs: 'Graphs',
       signalPrior: 'Prior', signalCalibrate: 'calibrate', signalState: 'State', signalRecompute: 'recompute', signalClaim: 'Claim', signalControl: 'control'
@@ -122,6 +123,7 @@
       honorThree: '<b>优秀学员</b><br>密码与数学暑期学校 · 60 人中前 10',
       hobbies: '个人爱好', hobbiesTitle: '研究之外，也认真享受生活。', basketball: '篮球', basketballNote: 'NBA 资深球迷', billiards: '台球', piano: '钢琴', bridge: '桥牌',
       contact: '联系', contactTitle: '欢迎交流与合作。', emailMe: '发送邮件',
+      wechat: '微信', wechatTitle: '扫码添加微信', wechatNote: '添加时请简单备注姓名与研究方向。',
       footerLine: '为清晰、证据与可审查性而构建。', backTop: '返回顶部 ↑',
       orbitCausal: '因果 AI', orbitAgents: '智能体', orbitGraphs: '图推理',
       signalPrior: '先验', signalCalibrate: '校准', signalState: '状态', signalRecompute: '重算', signalClaim: '主张', signalControl: '控制'
@@ -173,16 +175,15 @@
   }
 
   const savedTheme = localStorage.getItem('xihang-theme');
-  const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-  const initialTheme = savedTheme || preferredTheme;
+  const initialTheme = savedTheme || 'dark';
   root.dataset.theme = initialTheme;
-  themeMeta.setAttribute('content', initialTheme === 'light' ? '#f5f8f6' : '#07111a');
+  themeMeta.setAttribute('content', initialTheme === 'light' ? '#f8f5fc' : '#07050a');
 
   themeButton.addEventListener('click', () => {
     const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
     root.dataset.theme = next;
     localStorage.setItem('xihang-theme', next);
-    themeMeta.setAttribute('content', next === 'light' ? '#f5f8f6' : '#07111a');
+    themeMeta.setAttribute('content', next === 'light' ? '#f8f5fc' : '#07050a');
   });
 
   languageButton.addEventListener('click', () => applyLanguage(currentLanguage === 'en' ? 'zh' : 'en'));
@@ -226,6 +227,20 @@
 
   window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 16), { passive: true });
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  const wechatDialog = document.querySelector('.wechat-dialog');
+  const wechatTrigger = document.querySelector('.wechat-trigger');
+  const wechatClose = document.querySelector('.wechat-close');
+  wechatTrigger?.addEventListener('click', () => {
+    if (typeof wechatDialog.showModal === 'function') wechatDialog.showModal();
+    else wechatDialog.setAttribute('open', '');
+  });
+  wechatClose?.addEventListener('click', () => wechatDialog.close());
+  wechatDialog?.addEventListener('click', event => {
+    const rect = wechatDialog.getBoundingClientRect();
+    const inside = event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
+    if (!inside) wechatDialog.close();
+  });
 
   if (!reducedMotion) {
     window.addEventListener('pointermove', event => {
@@ -364,7 +379,7 @@
       }
       ctx.beginPath();
       ctx.arc(particle.x, particle.y, particle.r, 0, Math.PI * 2);
-      ctx.fillStyle = light ? 'rgba(8,127,109,.38)' : 'rgba(105,231,204,.42)';
+      ctx.fillStyle = light ? 'rgba(118,80,173,.36)' : 'rgba(197,163,255,.44)';
       ctx.fill();
       for (let j = index + 1; j < particles.length; j++) {
         const other = particles[j];
@@ -374,8 +389,8 @@
           ctx.moveTo(particle.x, particle.y);
           ctx.lineTo(other.x, other.y);
           ctx.strokeStyle = light
-            ? `rgba(8,127,109,${(1 - distance / 118) * .13})`
-            : `rgba(105,231,204,${(1 - distance / 118) * .15})`;
+            ? `rgba(118,80,173,${(1 - distance / 118) * .13})`
+            : `rgba(197,163,255,${(1 - distance / 118) * .16})`;
           ctx.lineWidth = .6;
           ctx.stroke();
         }
