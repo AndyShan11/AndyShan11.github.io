@@ -266,6 +266,40 @@
     });
   });
 
+  const methodVideos = [...document.querySelectorAll('.publication-animation')];
+  const playMethodVideo = video => video.play().catch(() => {
+    video.closest('.publication-figure')?.classList.add('video-unavailable');
+  });
+  methodVideos.forEach(video => {
+    video.addEventListener('error', () => video.closest('.publication-figure')?.classList.add('video-unavailable'));
+  });
+  if (reducedMotion) {
+    methodVideos.forEach(video => {
+      video.pause();
+      video.removeAttribute('autoplay');
+    });
+  } else if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting && document.visibilityState === 'visible') playMethodVideo(video);
+        else video.pause();
+      });
+    }, { threshold: 0.08, rootMargin: '180px 0px' });
+    methodVideos.forEach(video => {
+      video.pause();
+      videoObserver.observe(video);
+    });
+    document.addEventListener('visibilitychange', () => {
+      methodVideos.forEach(video => {
+        if (document.hidden) video.pause();
+        else if (video.getBoundingClientRect().top < innerHeight && video.getBoundingClientRect().bottom > 0) playMethodVideo(video);
+      });
+    });
+  } else {
+    methodVideos.forEach(playMethodVideo);
+  }
+
   if (!reducedMotion && matchMedia('(pointer: fine)').matches) {
     document.querySelectorAll('.pub-card').forEach(card => {
       card.addEventListener('pointermove', event => {
