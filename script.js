@@ -74,7 +74,7 @@
     zh: {
       navResearch: '研究', navProjects: '项目', navProfile: '教育',
       heroEyebrow: '数学 × 人工智能',
-      heroTitle: '我构建<span class="gradient-text">先验证、再信任的人工智能系统。</span>',
+      heroTitle: '我致力于构建<span class="gradient-text">先验证、再信任的人工智能系统。</span>',
       heroLede: '我是<strong>单夕航（Xihang Shan）</strong>，厦门大学数学与应用数学专业本科生。我的研究涉及机器学习、智能体、因果决策、图推理与数学建模。感谢本科导师<a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">周达教授</a>与<a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">罗晔副教授</a>的指导。',
       exploreResearch: '查看研究', getInTouch: '联系我',
       heroDirectionOne: '机器学习', heroDirectionTwo: 'AI 智能体与决策', heroDirectionThree: '因果与图推理', heroDirectionFour: '数学建模',
