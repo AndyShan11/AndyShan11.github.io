@@ -79,8 +79,7 @@
       hobbies: 'Beyond research', hobbiesTitle: 'Things I enjoy away from the screen.', basketball: 'Basketball', basketballNote: 'Long-time NBA fan · Always happy to talk basketball', billiards: 'Billiards', piano: 'Piano', bridge: 'Bridge', touchRugby: 'Touch Rugby',
       contact: 'Contact', contactTitle: 'Open to conversation<br>and collaboration.', emailMe: 'Email me',
       wechat: 'WeChat', wechatTitle: 'Scan to connect', wechatNote: 'Add a short note with your name and research interests.',
-      siteInfoLabel: 'Site information', siteInfoIntro: 'Quiet details, kept at the end.',
-      footerLine: 'Built for clarity, motion, and evidence.', backTop: 'Back to top ↑',
+      siteInfoLabel: 'Site information', backTop: 'Back to top ↑',
       orbitCausal: 'Causal AI', orbitAgents: 'Agents', orbitGraphs: 'Graphs',
       signalPrior: 'Prior', signalCalibrate: 'calibrate', signalState: 'State', signalRecompute: 'recompute', signalClaim: 'Claim', signalControl: 'control'
     },
@@ -147,8 +146,7 @@
       hobbies: '个人爱好', hobbiesTitle: '研究之外，也认真享受生活。', basketball: '篮球', basketballNote: 'NBA 资深球迷 · 欢迎一起聊球', billiards: '台球', piano: '钢琴', bridge: '桥牌', touchRugby: '触式橄榄球',
       contact: '联系', contactTitle: '欢迎交流与合作。', emailMe: '发送邮件',
       wechat: '微信', wechatTitle: '扫码添加微信', wechatNote: '添加时请简单备注姓名与研究方向。',
-      siteInfoLabel: '网站信息', siteInfoIntro: '次要信息统一放在页尾。',
-      footerLine: '为清晰、证据与可审查性而构建。', backTop: '返回顶部 ↑',
+      siteInfoLabel: '网站信息', backTop: '返回顶部 ↑',
       orbitCausal: '因果 AI', orbitAgents: '智能体', orbitGraphs: '图推理',
       signalPrior: '先验', signalCalibrate: '校准', signalState: '状态', signalRecompute: '重算', signalClaim: '主张', signalControl: '控制'
     }
