@@ -160,8 +160,8 @@
         <div class="news-list" id="news-list">
           <article class="news-row reveal"><time datetime="2026-08">Aug. 2026</time><p data-i18n="newsOne">Personal homepage launched.</p></article>
           <article class="news-row reveal"><time datetime="2026-07">Jul. 2026</time><p data-i18n-html="newsTwo">Summer research collaboration at HKUST with <a class="mentor-link" href="https://sites.google.com/site/eeyangc/" target="_blank" rel="noopener" aria-label="Prof. Can Yang's homepage">Prof. Can Yang</a>.</p></article>
-          <article class="news-row reveal"><time datetime="2026-07">Jul. 2026</time><p data-i18n="newsThree">Completed the NeurIPS 2026 rebuttal; post-rebuttal reviews: 4/4/5.</p></article>
-          <article class="news-row reveal"><time datetime="2026-06">Jun. 2026</time><p data-i18n="newsFour">Three manuscripts submitted to AAAI 2027.</p></article>
+          <article class="news-row reveal"><time datetime="2026-07">Jul. 2026</time><p data-i18n="newsThree">Completed the NeurIPS 2026 rebuttal; post-rebuttal reviews: 5 4 4.</p></article>
+          <article class="news-row reveal"><time datetime="2026-06">Jun. 2026</time><p data-i18n="newsFour">DeltaNAR submitted to AAAI 2027.</p></article>
           <article class="news-row reveal"><time datetime="2026-03">Mar. 2026</time><p data-i18n="newsFive">National-level undergraduate research program launched at Xiamen University.</p></article>
           <article class="news-row reveal"><time datetime="2025-07">Jul. 2025</time><p data-i18n="newsSix">Attended the Cryptography and Mathematics Summer School at the Institute of Information Engineering, Chinese Academy of Sciences, and was named an Outstanding Student.</p></article>
           <button class="news-toggle" type="button" aria-expanded="false" aria-controls="news-list" hidden>
@@ -181,9 +181,8 @@
         </div>
 
         <div class="filter-bar reveal" role="group" aria-label="Filter publications">
-          <button class="filter active" type="button" data-filter="all"><span data-i18n="filterAll">All</span> <span>6</span></button>
-          <button class="filter" type="button" data-filter="causal"><span data-i18n="filterCausal">Causal AI</span> <span>2</span></button>
-          <button class="filter" type="button" data-filter="agents"><span data-i18n="filterAgents">Agents</span> <span>1</span></button>
+          <button class="filter active" type="button" data-filter="all"><span data-i18n="filterAll">All</span> <span>4</span></button>
+          <button class="filter" type="button" data-filter="causal"><span data-i18n="filterCausal">Causal AI</span> <span>1</span></button>
           <button class="filter" type="button" data-filter="graphs"><span data-i18n="filterGraphs">Graphs & reasoning</span> <span>3</span></button>
         </div>
 
@@ -197,32 +196,13 @@
               <img class="publication-poster" src="assets/papers/prcd-map.png" alt="PRCD-MAP method overview" loading="lazy" />
             </a>
             <div class="pub-info">
-              <div class="pub-topline"><span class="venue" data-i18n="venueNeurips">NeurIPS 2026 · Under review</span><span class="index">01</span></div>
+              <div class="pub-topline"><span class="venue" data-i18n="venueIclr">ICLR · Under review</span><span class="index">01</span></div>
               <h3>PRCD-MAP: Learning How Much to Trust Imperfect Priors in Causal Discovery</h3>
               <p data-i18n="prcdDesc">Learns edge-specific trust from data, using useful prior structure while safely reverting to data-only discovery when the prior is misleading.</p>
-              <div class="review-note" data-i18n-html="reviewNote"><span></span>Post-rebuttal reviews: <strong>4/4/5</strong></div>
+              <div class="review-note" data-i18n-html="reviewNote"><span></span>(Previous NeurIPS scores: <strong>5 4 4</strong>)</div>
               <div class="pub-footer">
                 <span><b>Xihang Shan</b>, Da Zhou<sup>*</sup></span>
                 <span class="pub-links"><a href="https://arxiv.org/pdf/2605.01669.pdf" target="_blank" rel="noopener">PDF ↗</a><a href="https://github.com/AndyShan11/PRCD-MAP" target="_blank" rel="noopener">GitHub ↗</a></span>
-              </div>
-            </div>
-          </article>
-
-          <article class="pub-card reveal" data-topic="causal">
-            <a class="pub-visual publication-figure" href="https://andyshan11.github.io/CDV/paper.pdf" target="_blank" rel="noopener" aria-label="Open the Testing Before Trusting paper PDF">
-              <video class="publication-animation" muted playsinline preload="metadata" poster="assets/papers/testing-before-trusting.png" aria-hidden="true">
-                <source src="assets/papers/animations/testing-before-trusting.mp4?v=20260811-sync2" type="video/mp4" />
-                <img src="assets/papers/testing-before-trusting.png" alt="" />
-              </video>
-              <img class="publication-poster" src="assets/papers/testing-before-trusting.png" alt="Causal-skeptic bandit method overview" loading="lazy" />
-            </a>
-            <div class="pub-info">
-              <div class="pub-topline"><span class="venue" data-i18n="venueAaai">AAAI 2027 · Under review</span><span class="index">02</span></div>
-              <h3>Testing Before Trusting: Causal Skeptic Bandits under Unreliable Historical Evidence</h3>
-              <p data-i18n="cdvDesc">Treats historical causal knowledge as a hypothesis to be tested online; diagnostic falsification and a causal veto keep misleading graphs from steering decisions.</p>
-              <div class="pub-footer">
-                <span><b>Xihang Shan</b></span>
-                <span class="pub-links"><a href="https://andyshan11.github.io/CDV/paper.pdf" target="_blank" rel="noopener">PDF ↗</a><a href="https://github.com/AndyShan11/CDV" target="_blank" rel="noopener">GitHub ↗</a></span>
               </div>
             </div>
           </article>
@@ -236,31 +216,12 @@
               <img class="publication-poster" src="assets/papers/deltanar.png" alt="DeltaNAR method overview" loading="lazy" />
             </a>
             <div class="pub-info">
-              <div class="pub-topline"><span class="venue" data-i18n="venueAaai">AAAI 2027 · Under review</span><span class="index">03</span></div>
+              <div class="pub-topline"><span class="venue" data-i18n="venueAaai">AAAI 2027 · Under review</span><span class="index">02</span></div>
               <h3>DeltaNAR: Learning What to Reuse and What to Recompute in Neural Algorithmic Reasoning</h3>
               <p data-i18n="deltaDesc">Separates state that remains valid after a graph update from state that must be recomputed, enabling incremental reasoning without unsafe copying.</p>
               <div class="pub-footer">
                 <span><b>Xihang Shan</b>, Ye Luo<sup>*</sup></span>
                 <span class="pub-links"><a href="https://andyshan11.github.io/Delta-NAR/paper.pdf" target="_blank" rel="noopener">PDF ↗</a><a href="https://github.com/AndyShan11/Delta-NAR" target="_blank" rel="noopener">GitHub ↗</a></span>
-              </div>
-            </div>
-          </article>
-
-          <article class="pub-card reveal" data-topic="agents">
-            <a class="pub-visual publication-figure" href="https://andyshan11.github.io/CDTG/paper.pdf" target="_blank" rel="noopener" aria-label="Open the Failure-Learning Claims Need Controls paper PDF">
-              <video class="publication-animation" muted playsinline preload="metadata" poster="assets/papers/failure-learning.png" aria-hidden="true">
-                <source src="assets/papers/animations/failure-learning.mp4?v=20260811-sync2" type="video/mp4" />
-                <img src="assets/papers/failure-learning.png" alt="" />
-              </video>
-              <img class="publication-poster" src="assets/papers/failure-learning.png" alt="Failure-learning evaluation overview" loading="lazy" />
-            </a>
-            <div class="pub-info">
-              <div class="pub-topline"><span class="venue" data-i18n="venueAaai">AAAI 2027 · Under review</span><span class="index">04</span></div>
-              <h3>Failure-Learning Claims Need Controls: A Claim-Control Evaluation of Language Agents</h3>
-              <p data-i18n="claimDesc">Uses claim-matched controls to distinguish repair, transfer, target-solving, and executable validity from ordinary task success.</p>
-              <div class="pub-footer">
-                <span><b>Xihang Shan</b></span>
-                <span class="pub-links"><a href="https://andyshan11.github.io/CDTG/paper.pdf" target="_blank" rel="noopener">PDF ↗</a><a href="https://github.com/AndyShan11/CDTG" target="_blank" rel="noopener">GitHub ↗</a></span>
               </div>
             </div>
           </article>
@@ -274,7 +235,7 @@
               <img class="publication-poster" src="assets/papers/bounded-path-context.png" alt="Bounded Path Context method overview" loading="lazy" />
             </a>
             <div class="pub-info">
-              <div class="pub-topline"><span class="venue" data-i18n="venueEmnlp">EMNLP 2026 · Under review</span><span class="index">05</span></div>
+              <div class="pub-topline"><span class="venue" data-i18n="venueArxiv">arXiv preprint</span><span class="index">03</span></div>
               <h3>Bounded Path Context: Visible Path History in LLM-Based KGQA</h3>
               <p data-i18n="bpcDesc">Uses bounded visible path history to reduce prompt exposure while preserving effective, auditable symbolic reasoning.</p>
               <div class="pub-footer">
@@ -293,7 +254,7 @@
               <img class="publication-poster" src="assets/papers/decoder-audit.png" alt="Recipe-controlled decoder audit overview" loading="lazy" />
             </a>
             <div class="pub-info">
-              <div class="pub-topline"><span class="venue" data-i18n="venuePricai">PRICAI 2026 · Under review</span><span class="index">06</span></div>
+              <div class="pub-topline"><span class="venue" data-i18n="venueArxiv">arXiv preprint</span><span class="index">04</span></div>
               <h3>Recipe-Controlled Decoder Audit for Structural Knowledge-Graph Completion</h3>
               <p data-i18n="rcdaDesc">Shows how decoder choice and training recipe can confound structural KGC comparisons, motivating controlled reporting across architectures and datasets.</p>
               <div class="pub-footer">
@@ -430,7 +391,7 @@
           <div class="site-meta-heading reveal">
             <p class="eyebrow" data-i18n="siteInfoLabel">Site information</p>
           </div>
-          <div class="hero-meta reveal" aria-label="Live website information" data-updated="2026-08-11T21:02:00+08:00">
+          <div class="hero-meta reveal" aria-label="Live website information" data-updated="2026-09-25T10:10:12+08:00">
             <div class="live-item"><span class="pulse-dot"></span><span class="live-label" data-i18n="localTime">Beijing time</span><strong id="current-time">—</strong></div>
             <div class="live-item"><span class="live-label" data-i18n="lastUpdated">Updated</span><strong id="last-updated">—</strong></div>
             <div class="live-item"><span class="live-label" data-i18n="pageViews">Views</span><strong id="page-views">—</strong></div>
