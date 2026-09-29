@@ -19,10 +19,10 @@
     en: {
       navResearch: 'Research', navProjects: 'Projects', navProfile: 'Education',
       heroEyebrow: 'Xihang Shan · 单夕航',
-      heroTitle: 'I am committed to building AI systems that <span class="gradient-text">test before they trust.</span>',
-      heroLede: 'I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research connects machine learning, AI agents, causal decision-making, graph reasoning, and mathematical modeling. I am grateful to my undergraduate mentors, <a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">Prof. Da Zhou</a> and <a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">Prof. Ye Luo</a>, for their guidance.',
+      heroTitle: 'Research interests in <span class="gradient-text">machine learning, algorithms, AI, AI agents, and mathematical modeling.</span>',
+      heroLede: 'I am <strong>Xihang Shan</strong> (单夕航), a mathematics undergraduate at Xiamen University. My research interests include machine learning, algorithms, artificial intelligence, AI agents, and mathematical modeling. I am grateful to my undergraduate mentors, <a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">Prof. Da Zhou</a> and <a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">Prof. Ye Luo</a>, for their guidance.',
       exploreResearch: 'Explore research', getInTouch: 'Get in touch',
-      heroDirectionOne: 'Machine Learning', heroDirectionTwo: 'AI Agents & Decision-Making', heroDirectionThree: 'Causal & Graph Reasoning', heroDirectionFour: 'Mathematical Modeling',
+      heroDirectionOne: 'Machine Learning', heroDirectionTwo: 'Algorithms', heroDirectionThree: 'Artificial Intelligence & AI Agents', heroDirectionFour: 'Mathematical Modeling',
       localTime: 'Beijing time', lastUpdated: 'Updated', pageViews: 'Views', visitorIp: 'IP', locationHongKong: 'Hong Kong, China',
       newsLabel: 'News', newsIntro: 'Recent updates',
       newsOne: 'Personal homepage launched.',
@@ -32,8 +32,8 @@
       newsFive: 'National-level undergraduate research program launched at Xiamen University.',
       newsSix: 'Attended the Cryptography and Mathematics Summer School at the Institute of Information Engineering, Chinese Academy of Sciences, and was named an Outstanding Student.',
       newsShowMore: 'Show earlier updates', newsShowLess: 'Show fewer updates',
-      selectedManuscripts: 'Selected manuscripts', researchTitle: 'Research that questions its assumptions.',
-      researchIntro: 'Across causal learning, agents, and graphs, I design controls that reveal when external knowledge helps—and when a model should refuse it.',
+      selectedManuscripts: 'Selected manuscripts', researchTitle: 'Selected research',
+      researchIntro: 'My work spans machine learning, algorithms, artificial intelligence, AI agents, and mathematical modeling.',
       filterAll: 'All', filterCausal: 'Causal AI', filterAgents: 'Agents', filterGraphs: 'Graphs & reasoning',
       venueIclr: 'ICLR · Under review', venueAaai: 'AAAI 2027 · Under review',
       venueArxiv: 'arXiv preprint',
@@ -67,11 +67,9 @@
       rcdaDescriptors: 'Audit descriptors<br><small>e/r · symmetry · provenance</small>', rcdaChecklist: 'Controlled reporting checklist',
       rcdaNote: 'Architectural conclusions are conditioned on decoder, depth, data, and recipe.',
       rcdaDesc: 'Shows how decoder choice and training recipe can confound structural KGC comparisons, motivating controlled reporting across architectures and datasets.',
-      selectedProjects: 'Other projects', projectsTitle: 'Open, inspectable research systems.',
-      locsourceType: '03 / Spatial AI', locsourceDesc: 'Conservative, auditable transcript-ownership proposals for Xenium post-segmentation analysis.',
-      booleanType: '02 / Discrete structure', booleanDesc: 'Walsh-spectral affine approximation, derivative-guided affine covers, and feedforward sequence recovery.',
-      memoryType: '01 / Research agents', memoryDesc: 'Bounded, claim-relevant memory views and fail-closed evidence auditing for research agents.',
-      repoReport: 'Repository & report ↗', openRepository: 'Open repository ↗', educationRecognition: 'Education & honors', educationLabel: 'Education', recognitionLabel: 'Honors', educationHeading: 'Education', honorsHeading: 'Honors', educationYears: '2023—2027 (Expected)',
+      selectedProjects: 'Featured project',
+      courtVisionType: '01 / Basketball training', courtVisionDesc: 'A local-first basketball training companion for reviewing and comparing motion videos, planning practice, and tracking progress.', openCourtVision: 'Open CourtVision ↗',
+      educationRecognition: 'Education & honors', educationLabel: 'Education', recognitionLabel: 'Honors', educationHeading: 'Education', honorsHeading: 'Honors', educationYears: '2023—2027 (Expected)',
       xmu: 'Xiamen University', educationDegree: 'B.S. in Mathematics and Applied Mathematics<br>School of Mathematical Sciences',
       honorOne: '<b>Fujian First Prize</b><br>National Undergraduate Mathematical Modeling Contest · Team Leader',
       honorTwo: '<b>Fujian Third Prize</b><br>National Undergraduate Mathematical Modeling Contest · Team Leader',
@@ -86,10 +84,10 @@
     zh: {
       navResearch: '研究', navProjects: '项目', navProfile: '教育',
       heroEyebrow: '单夕航 · Xihang Shan',
-      heroTitle: '我致力于构建<span class="gradient-text">先验证、再信任的人工智能系统。</span>',
-      heroLede: '我是<strong>单夕航（Xihang Shan）</strong>，厦门大学数学与应用数学专业本科生。我的研究涉及机器学习、智能体、因果决策、图推理与数学建模。感谢本科导师<a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">周达教授</a>与<a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">罗晔副教授</a>的指导。',
+      heroTitle: '研究兴趣：<span class="gradient-text">机器学习、算法、人工智能、AI 智能体与数学建模。</span>',
+      heroLede: '我是<strong>单夕航（Xihang Shan）</strong>，厦门大学数学与应用数学专业本科生。我的研究兴趣包括机器学习、算法、人工智能、AI 智能体与数学建模。感谢本科导师<a class="mentor-link" href="https://zhoudalab.github.io/" target="_blank" rel="noopener">周达教授</a>与<a class="mentor-link" href="https://github.com/luoye-group/" target="_blank" rel="noopener">罗晔副教授</a>的指导。',
       exploreResearch: '查看研究', getInTouch: '联系我',
-      heroDirectionOne: '机器学习', heroDirectionTwo: 'AI 智能体与决策', heroDirectionThree: '因果与图推理', heroDirectionFour: '数学建模',
+      heroDirectionOne: '机器学习', heroDirectionTwo: '算法', heroDirectionThree: '人工智能与 AI 智能体', heroDirectionFour: '数学建模',
       localTime: '北京时间', lastUpdated: '最后更新', pageViews: '浏览量', visitorIp: 'IP', locationHongKong: '中国香港',
       newsLabel: '最新动态', newsIntro: '近期更新',
       newsOne: '个人主页上线。',
@@ -99,8 +97,8 @@
       newsFive: '厦门大学国家级大学生创新创业训练计划立项。',
       newsSix: '参加中国科学院信息工程研究所密码与数学暑期学校，获评优秀学员。',
       newsShowMore: '展开更早动态', newsShowLess: '收起更早动态',
-      selectedManuscripts: '代表性论文', researchTitle: '让模型先检验，再相信。',
-      researchIntro: '围绕因果学习、智能体与图推理，我研究如何判断外部知识何时有效，以及模型何时应当拒绝使用它。',
+      selectedManuscripts: '代表性论文', researchTitle: '代表性研究',
+      researchIntro: '我的研究兴趣包括机器学习、算法、人工智能、AI 智能体与数学建模。',
       filterAll: '全部', filterCausal: '因果 AI', filterAgents: '智能体', filterGraphs: '图与推理',
       venueIclr: 'ICLR · 在投', venueAaai: 'AAAI 2027 · 审稿中',
       venueArxiv: 'arXiv 预印本',
@@ -134,11 +132,9 @@
       rcdaDescriptors: '审计描述量<br><small>边/关系 · 对称性 · 数据来源</small>', rcdaChecklist: '受控报告清单',
       rcdaNote: '架构结论取决于解码器、深度、数据集与训练配方。',
       rcdaDesc: '揭示解码器选择与训练配方如何混淆结构化知识图谱补全比较，并推动跨架构、跨数据集的受控报告。',
-      selectedProjects: '其它项目', projectsTitle: '开放且可审查的研究系统。',
-      locsourceType: '03 / 空间组学 AI', locsourceDesc: '面向 Xenium 后分割分析的保守、可审计转录本归属提案。',
-      booleanType: '02 / 离散结构', booleanDesc: 'Walsh 谱仿射逼近、导数引导的仿射覆盖与前馈序列恢复。',
-      memoryType: '01 / 研究智能体', memoryDesc: '面向研究智能体的有界、主张相关记忆视图，以及失败关闭式证据审计。',
-      repoReport: '代码与报告 ↗', openRepository: '查看代码仓库 ↗', educationRecognition: '教育经历与荣誉', educationLabel: '教育经历', recognitionLabel: '荣誉', educationHeading: '教育经历', honorsHeading: '荣誉', educationYears: '2023—2027（预计）',
+      selectedProjects: '重点项目',
+      courtVisionType: '01 / 篮球训练', courtVisionDesc: '一款本地优先的篮球训练助手，用于回看与对比动作录像、制定练习计划并记录训练进步。', openCourtVision: '打开 CourtVision ↗',
+      educationRecognition: '教育经历与荣誉', educationLabel: '教育经历', recognitionLabel: '荣誉', educationHeading: '教育经历', honorsHeading: '荣誉', educationYears: '2023—2027（预计）',
       xmu: '厦门大学', educationDegree: '数学与应用数学 理学学士<br>数学科学学院',
       honorOne: '<b>福建省一等奖</b><br>全国大学生数学建模竞赛 · 队长',
       honorTwo: '<b>福建省三等奖</b><br>全国大学生数学建模竞赛 · 队长',
@@ -191,7 +187,7 @@
     cvLabel.textContent = language === 'zh' ? '简历' : 'CV';
     navToggle.setAttribute('aria-label', navigationLabel(navToggle.getAttribute('aria-expanded') === 'true'));
     document.querySelector('.skip-link').textContent = language === 'zh' ? '跳到正文' : 'Skip to content';
-    document.title = language === 'zh' ? '单夕航（Xihang Shan）— 可信与结构化人工智能' : 'Xihang Shan (单夕航) — Trustworthy & Structured AI';
+    document.title = language === 'zh' ? '单夕航（Xihang Shan）— 机器学习与人工智能' : 'Xihang Shan (单夕航) — Machine Learning & AI';
     localStorage.setItem('xihang-language', language);
     updateNewsToggleLabel();
     refreshTimes();

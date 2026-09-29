@@ -210,7 +210,7 @@ button { color: inherit; font: inherit; }
 .badge { flex: none; padding: 6px 9px; border: 1px solid var(--line-strong); border-radius: 999px; color: var(--accent); font: 650 9px/1 ui-monospace, monospace; }
 
 .compact-heading { display: block; margin-bottom: 24px; }
-.project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.project-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
 .project-card { min-height: 410px; position: relative; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .3s, box-shadow .3s; }
 .project-card:hover { transform: translateY(-7px); border-color: var(--line-strong); box-shadow: var(--shadow); }
 .project-number { position: relative; z-index: 2; color: var(--text-soft); font: 650 10px/1 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
@@ -221,6 +221,7 @@ button { color: inherit; font: inherit; }
 .project-locsource { background: radial-gradient(circle at 70% 25%, rgba(192,151,255,.22), transparent 35%), linear-gradient(145deg, var(--surface), rgba(49,31,66,.52)); }
 .project-boolean { background: radial-gradient(circle at 72% 20%, rgba(137,151,246,.20), transparent 35%), linear-gradient(145deg, var(--surface), rgba(31,29,68,.58)); }
 .project-memory { background: radial-gradient(circle at 72% 20%, rgba(225,164,238,.18), transparent 35%), linear-gradient(145deg, var(--surface), rgba(57,34,62,.56)); }
+.project-courtvision { min-height: clamp(440px, 48vw, 650px); background: linear-gradient(145deg, var(--surface), rgba(49,31,66,.52)); }
 .project-orbit { position: absolute; width: 310px; height: 310px; right: -30px; top: -55px; border: 1px solid var(--line-strong); border-radius: 50%; animation: spin 34s linear infinite; }
 .project-orbit::before, .project-orbit::after, .project-orbit span { content: ""; position: absolute; border: 1px solid var(--line); border-radius: 50%; }
 .project-orbit::before { inset: 17%; }
@@ -281,6 +282,9 @@ button { color: inherit; font: inherit; }
 .project-art-memory { background-position: left center; }
 .project-art-boolean { background-position: right center; }
 .project-art-locsource { background-image: url("assets/site/locsource-spatial.webp"); background-size: auto 136%; background-position: center 63%; }
+.project-art-courtvision { background-image: url("assets/site/courtvision.png"); background-size: cover; background-position: center 44%; }
+.project-courtvision::after { background: linear-gradient(90deg, rgba(20,13,30,.96) 0%, rgba(20,13,30,.72) 38%, rgba(20,13,30,.12) 76%), linear-gradient(180deg, rgba(20,13,30,.04), rgba(20,13,30,.62)); }
+.project-art-courtvision { opacity: .92; filter: saturate(.84) contrast(.98) brightness(.82); }
 .project-card .project-number { color: var(--accent); }
 .project-card .project-body h3 { color: var(--heading); }
 .project-card .project-body p { color: var(--text-soft); }
@@ -288,6 +292,8 @@ button { color: inherit; font: inherit; }
 [data-theme="light"] .project-card::after { background: linear-gradient(180deg, rgba(248,245,252,.02) 18%, rgba(248,245,252,.78) 58%, rgba(248,245,252,.99) 84%); }
 [data-theme="light"] .project-art { opacity: .78; filter: saturate(.58) contrast(.94) brightness(.98); }
 [data-theme="light"] .project-card:hover .project-art { opacity: .88; filter: saturate(.72) contrast(.98) brightness(1); }
+[data-theme="light"] .project-courtvision::after { background: linear-gradient(90deg, rgba(248,245,252,.98) 0%, rgba(248,245,252,.78) 38%, rgba(248,245,252,.10) 76%), linear-gradient(180deg, rgba(248,245,252,.02), rgba(248,245,252,.50)); }
+[data-theme="light"] .project-art-courtvision { opacity: .94; filter: saturate(.82) contrast(.98) brightness(1); }
 
 /* Education and honors */
 .profile-group + .profile-group { margin-top: 92px; }
