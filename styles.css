@@ -218,6 +218,9 @@ button { color: inherit; font: inherit; }
 .project-body h3 { margin: 0 0 12px; color: var(--heading); font: 500 clamp(29px, 3.2vw, 43px)/1 Georgia, serif; letter-spacing: -.04em; }
 .project-body p { margin: 0 0 24px; color: var(--text-soft); font-size: 14px; }
 .project-body span { color: var(--accent); font: 700 11px/1 ui-monospace, monospace; }
+.project-links { display: flex; flex-wrap: wrap; gap: 14px 24px; }
+.project-links a { color: var(--accent); font: 700 11px/1.3 ui-monospace, monospace; text-decoration: none; }
+.project-links a:hover { color: var(--heading); }
 .project-locsource { background: radial-gradient(circle at 70% 25%, rgba(192,151,255,.22), transparent 35%), linear-gradient(145deg, var(--surface), rgba(49,31,66,.52)); }
 .project-boolean { background: radial-gradient(circle at 72% 20%, rgba(137,151,246,.20), transparent 35%), linear-gradient(145deg, var(--surface), rgba(31,29,68,.58)); }
 .project-memory { background: radial-gradient(circle at 72% 20%, rgba(225,164,238,.18), transparent 35%), linear-gradient(145deg, var(--surface), rgba(57,34,62,.56)); }
