@@ -31,3 +31,17 @@ Run `python tools/generate_publication_figures.py` for static posters. Run
 `python tools/generate_publication_animations.py` for the posters plus the
 8-second model-process videos. Each scene animates a real method state rather
 than adding decorative motion to a static figure.
+
+## Web PDF optimization
+
+`tools/optimize_pdfs.py` produces linearized PDFs so browsers can render the
+first page while the rest downloads. It requires `pymupdf`, `pikepdf`, and
+`Pillow`. Pass separate input and output paths, verify the result, then replace
+the website asset. Keep full research originals outside this checkout.
+
+The optional `--figures` directory restores rasterized DeltaNAR plots from
+their original vector PDFs. Embedded raster pixels must match a source
+`*_aaai27.png` exactly; the corresponding PDF omits `_aaai27` from its name.
+Render and compare all restored figures before publishing, and keep the
+paper's page count, prose, layout, and links unchanged. The script also checks
+the output PDF's structure and linearization hints.
